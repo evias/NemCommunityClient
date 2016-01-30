@@ -1,0 +1,666 @@
+changed texts.faults.101
+	from: 'File not found.'
+	  to: 'The wallet file does not exist.'
+	 was: '未找到文件。'
+
+changed texts.faults.103
+	from: 'Wallet file is corrupted. Please recover your wallet from a backup.'
+	  to: 'Wallet file is corrupt. Please recover your wallet from a backup.'
+	 was: '钱包文件已损坏。如果您的钱包存在备份，请使用备份恢复你的账户，或添加一个新账户。'
+
+changed texts.faults.104
+	from: 'The provided password is not correct.'
+	  to: 'The provided password for the wallet is not correct.'
+	 was: '该密码不正确，请认真回忆密码，如该密码丢失将造成无法复原！'
+
+changed texts.wallet.nav.[2]
+	from: 'Contacts'
+	  to: 'Address Book'
+	 was: '联系人'
+
+translated texts.common.password
+	    from: 'Password'
+	      to: '密码'
+	based on: texts.landing.main.passwordPlh
+
+translated texts.common.address
+	    from: 'Address'
+	      to: '地址'
+	based on: texts.modals.verifyRealAccountData.address
+
+translated texts.common.privateLabel
+	    from: 'Private label'
+	      to: '标识'
+	based on: texts.modals.createAccount.label
+
+translated texts.modals.multisig.labelDesc
+	    from: 'This account is labeled as {{1}}'
+	      to: '此帐户标记为 {{1}}'
+	based on: texts.modals.sendNem.labelDesc
+
+translated texts.modals.multisig.nullLabelDesc
+	    from: "This account doesn't have a label"
+	      to: '此帐户没有标记'
+	based on: texts.modals.sendNem.nullLabelDesc
+
+translated texts.modals.multisig.cancel
+	    from: 'Cancel'
+	      to: '取消'
+	based on: texts.modals.sendNem.txConfirm.cancel
+
+translated texts.modals.multisig.fee
+	    from: 'Fee'
+	      to: '费用'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.modals.multisig.feeValidation
+	    from: 'Fee must not be less than the minimum fee'
+	      to: '无效费用值，必须填入等于或高于最小费用的值。'
+	based on: texts.modals.sendNem.feeValidation
+
+translated texts.modals.multisig.dueBy
+	    from: 'Due by'
+	      to: '限期'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.modals.multisig.useMinimumFee
+	    from: 'Use minimum fee'
+	      to: '支付最小费用'
+	based on: texts.modals.sendNem.useMinimumFee
+
+translated texts.modals.multisig.hours
+	    from: 'hour(s)'
+	      to: '小时数'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.modals.signMultisig.fee
+	    from: 'Fee'
+	      to: '费用'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.modals.signMultisig.feeValidation
+	    from: 'Fee must not be less than the minimum fee'
+	      to: '无效费用值，必须填入等于或高于最小费用的值。'
+	based on: texts.modals.sendNem.feeValidation
+
+translated texts.modals.signMultisig.dueBy
+	    from: 'Due by'
+	      to: '限期'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.modals.signMultisig.useMinimumFee
+	    from: 'Use minimum fee'
+	      to: '支付最小费用'
+	based on: texts.modals.sendNem.useMinimumFee
+
+translated texts.modals.signMultisig.hours
+	    from: 'hour(s)'
+	      to: '小时数'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.modals.signMultisig.password
+	    from: 'Password'
+	      to: '密码'
+	based on: texts.landing.main.passwordPlh
+
+translated texts.modals.signMultisig.passwordValidation
+	    from: 'Password must not be blank'
+	      to: 'Password must not be blank'
+	based on: texts.modals.sendNem.passwordValidation
+
+translated texts.modals.signMultisig.send
+	    from: 'Send'
+	      to: '发送'
+	based on: texts.modals.sendNem.send
+
+translated texts.modals.signMultisig.cancel
+	    from: 'Cancel'
+	      to: '取消'
+	based on: texts.modals.sendNem.txConfirm.cancel
+
+translated texts.modals.signMultisig.sending
+	    from: 'Sending...'
+	      to: '正在发送中...'
+	based on: texts.modals.sendNem.txConfirm.sending
+
+translated texts.modals.signMultisig.successMessage
+	    from: 'Transaction has been sent successfully!'
+	      to: '交易发送成功!'
+	based on: texts.modals.sendNem.successMessage
+
+translated texts.modals.signMultisig.txConfirm.amount
+	    from: 'Amount'
+	      to: '金额'
+	based on: texts.transactions.table.columns.[8]
+
+translated texts.modals.signMultisig.txConfirm.to
+	    from: 'To'
+	      to: '收件人'
+	based on: texts.modals.sendNem.txConfirm.to
+
+translated texts.modals.signMultisig.txConfirm.fee
+	    from: 'Fee'
+	      to: '费用'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.modals.signMultisig.txConfirm.dueBy
+	    from: 'Due by'
+	      to: '限期'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.modals.signMultisig.txConfirm.hours
+	    from: 'hour(s)'
+	      to: '小时数'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.modals.signMultisig.txConfirm.total
+	    from: 'Total'
+	      to: '总价'
+	based on: texts.modals.sendNem.txConfirm.total
+
+translated texts.modals.signMultisig.txConfirm.message
+	    from: 'Message'
+	      to: '留言'
+	based on: texts.transactions.table.columns.[3]
+
+translated texts.modals.signMultisig.txConfirm.encrypted
+	    from: 'Message is encrypted'
+	      to: '消息被加密'
+	based on: texts.transactions.table.encrypted
+
+translated texts.modals.signMultisig.txConfirm.noMessage
+	    from: 'No message'
+	      to: '无留言'
+	based on: texts.transactions.table.noMessage
+
+translated texts.modals.sendNem.sender
+	    from: 'Sender'
+	      to: '发件人'
+	based on: texts.modals.transactionDetails.sender
+
+translated texts.modals.addContact.add
+	    from: 'Add'
+	      to: '添加'
+	based on: texts.modals.addAccount.add
+
+translated texts.modals.editContact.saveChanges
+	    from: 'Save changes'
+	      to: '保存更改'
+	based on: texts.settings.save
+
+translated texts.modals.removeContact.remove
+	    from: 'Remove'
+	      to: '删除'
+	based on: texts.modals.removeAccount.remove
+
+translated texts.addressBook.sendNem
+	    from: 'Send NEM'
+	      to: '发送 NEM'
+	based on: texts.transactions.sendNem
+
+translated texts.addressBook.remove
+	    from: 'Remove'
+	      to: '删除'
+	based on: texts.modals.removeAccount.remove
+
+-----translated texts.common.passwordValidation
+	    from: 'Password must not be blank'
+	      to: 'Password must not be blank'
+	based on: texts.modals.sendNem.passwordValidation
+
+translated texts.modals.multisig.txConfirm.total
+	    from: 'Total'
+	      to: '总价'
+	based on: texts.modals.sendNem.txConfirm.total
+
+translated texts.modals.transactionDetails.cosignatory
+	    from: 'Cosignatory'
+	      to: 'Cosignatory'
+	based on: texts.modals.signMultisig.sender
+
+-----translated texts.modals.signMultisig.original.from
+	    from: 'Multisig account'
+	      to: 'Multisig account'
+	based on: texts.modals.signMultisig.txConfirm.from
+
+translated texts.modals.signMultisig.original.to
+	    from: 'Recipient'
+	      to: '收件人'
+	based on: texts.modals.transactionDetails.recipient
+
+translated texts.modals.signMultisig.original.amount
+	    from: 'Amount'
+	      to: '金额'
+	based on: texts.transactions.table.columns.[8]
+
+translated texts.modals.signMultisig.multisigTotal
+	    from: 'Total'
+	      to: '总价'
+	based on: texts.modals.sendNem.txConfirm.total
+
+----------changed texts.faults.305
+	from: 'NEM Infrastructure Server is not available.'
+	  to: 'The NEM Infrastructure Server (NIS) is not available.\n\nTry to restart the NEM software.\n\nIf you are using a remote NIS, check your configured host for typing errors or use another remote NIS.'
+	 was: 'NEM 基础架构服务器(NIS)无法使用。'
+
+changed texts.modals.multisig.warning
+	from: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. most likely you <b>DO NOT</b> want to do that.'
+	  to: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. Most likely you <b>DO NOT</b> want to do that.'
+	 was: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. most likely you <b>DO NOT</b> want to do that.'
+
+changed texts.wallet.actions.convertMultisig
+	from: 'Convert to multisig'
+	  to: 'Convert other account to multisig'
+	 was: '转换至多重签名账户'
+
+-----changed texts.faults.305
+	from: 'NEM Infrastructure Server is not available.'
+	  to: 'The NEM Infrastructure Server (NIS) is not available.\n\nTry to restart the NEM software.\n\nIf you are using a remote NIS, check your configured host for typing errors or use another remote NIS.'
+	 was: 'The NEM Infrastructure Server (NIS) is not available.\n\nTry to restart the NEM software.\n\nIf you are using a remote NIS, check your configured host for typing errors or use another remote NIS.'
+
+changed texts.faults.602
+	from: 'Cannot perform any operations until db is fully loaded.'
+	  to: 'Almost ready. NEM Infrastructure Server is currently loading blocks. Wallet will be functional when db is fully loaded.'
+	 was: 'Cannot perform any operations until db is fully loaded.'
+
+changed texts.modals.multisig.warning
+	from: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. most likely you <b>DO NOT</b> want to do that.'
+	  to: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. Most likely you <b>DO NOT</b> want to do that.'
+	 was: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. Most likely you <b>DO NOT</b> want to do that.'
+
+changed texts.wallet.actions.convertMultisig
+	from: 'Convert to multisig'
+	  to: 'Convert other account to multisig'
+	 was: 'Convert other account to multisig'
+
+changed texts.harvestedBlocks.table.columns.[2]
+	from: 'Block hash'
+	  to: 'Block difficulty'
+	 was: '区块hash值'
+
+-----translated texts.common.fee
+	    from: 'Fee'
+	      to: '费用'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.common.dueBy
+	    from: 'Due by'
+	      to: '限期'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.common.hours
+	    from: 'hour(s)'
+	      to: '小时数'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.common.hoursDue
+	    from: 'Due by (hours)'
+	      to: '到期小时数'
+	based on: texts.modals.deactivateRemote.hoursDue
+
+translated texts.modals.removeAccount.account
+	    from: 'Account'
+	      to: '帐户'
+	based on: texts.modals.stopRemote.account
+
+translated texts.modals.removeAccount.label
+	    from: 'Account label'
+	      to: '帐户标识'
+	based on: texts.modals.changeAccountLabel.label
+
+translated texts.dashboard.transactions.accountCosignatories
+	    from: 'Multisig account'
+	      to: '多重签名账户'
+	based on: texts.modals.signMultisig.original.from
+
+-----changed texts.faults.703
+	from: 'Your account does not have the right balance to send the provided amount of XEM.'
+	  to: 'Your account does not have the right balance to make this transaction.'
+	 was: '您的帐户余额不足，请查证后重试。'
+
+changed texts.faults.730
+	from: 'Importance transfer transaction (secure harvesting) conflicts with existing transaction.'
+	  to: 'Importance transfer transaction (delegated harvesting) conflicts with existing transaction.'
+	 was: '重要性传输交互 (安全远程收获) 与现有交互冲突。'
+
+changed texts.faults.731
+	from: 'Secure harvesting account has non zero balance and cannot be used.'
+	  to: 'Delegated harvesting account has non zero balance and cannot be used.'
+	 was: '发起安全收获的账户余额不为0，不可发起。'
+
+changed texts.faults.733
+	from: 'Secure harvesting is already active.'
+	  to: 'Delegated harvesting is already active.'
+	 was: '安全收获已启用。'
+
+changed texts.faults.734
+	from: 'Secure harvesting is NOT active. Cannot deactivate.'
+	  to: 'Delegated harvesting is NOT active. Cannot deactivate.'
+	 was: '安全收获未启用，无法停用。'
+
+changed texts.modals.bootLocalNode.warningText
+	from: 'You\'re trying to boot a node using account with balance: ({{{1}}} XEM). This will reveal this account\'s private key to node: <u>{{2}}</u>'
+	  to: 'You\'re trying to boot a node <u>{{2}}</u><br/><br/>Booting remote node is currently impossible from within NCC.'
+	 was: '您正在使用余额为: ({{{1}}} XEM)的账号启用节点，这会使私钥对节点 {{2}}暴露'
+
+changed texts.modals.activateRemote.title
+	from: 'Activate Remote Harvesting'
+	  to: 'Activate Delegated Harvesting'
+	 was: '激活远程收获'
+
+changed texts.modals.deactivateRemote.title
+	from: 'Deactivate Remote Harvesting'
+	  to: 'Deactivate Delegated Harvesting'
+	 was: '停止激活远程收获'
+
+changed texts.modals.startRemote.title
+	from: 'Start Remote Harvesting'
+	  to: 'Start Delegated Harvesting'
+	 was: '开始远程收获'
+
+changed texts.modals.stopRemote.title
+	from: 'Stop Remote Harvesting'
+	  to: 'Stop Delegated Harvesting'
+	 was: '停止远程收获'
+
+changed texts.modals.logoutWarning.leavePage
+	from: "You're leaving your wallet. Remember that if you leave your wallet this way, some others may still be able to access your wallet from this computer.\n\nTo prevent that from happening, please log out using the \"Close wallet\" menu item in the top-right dropdown menu before you close the browser tab or navigate away."
+	  to: "You're leaving your wallet. Remember that if you leave your wallet this way, some others may still be able to access your wallet from this computer. To prevent that from happening, please log out using the \"Close wallet\" menu item in the top-right dropdown menu before you close the browser tab or navigate away."
+	 was: '你正在离开你的钱包。请知晓如果你用此方式离开钱包，其他人仍然能够从本机访问你的钱包。\n为避免安全问题，建议您在离开或关闭页面前使用右上方的下拉菜单中的关闭钱包按钮。'
+
+changed texts.landing.about.sections.[1].paragraphs.[1]
+	from: 'The more <strong>NIS</strong> the better the security.'
+	  to: 'The more <strong>NIS</strong> there are in the network, the better the security.,'
+	 was: '<strong>NIS</strong>服务器越多，NEM的整体安全性越好。'
+
+changed texts.dashboard.importance.remoteHarvest.activate
+	from: 'Activate remote harvesting'
+	  to: 'Activate delegated harvesting'
+	 was: '激活远程收获'
+
+changed texts.dashboard.importance.remoteHarvest.activating
+	from: 'Activating remote harvesting...'
+	  to: 'Activating delegated harvesting...'
+	 was: '激活...'
+
+changed texts.dashboard.importance.remoteHarvest.active
+	from: 'Remote harvesting is active'
+	  to: 'Delegated harvesting is active'
+	 was: '远程收获进行中'
+
+changed texts.dashboard.importance.remoteHarvest.deactivate
+	from: 'Deactivate remote harvesting'
+	  to: 'Deactivate delegated harvesting'
+	 was: '停止激活远程收获'
+
+changed texts.dashboard.importance.remoteHarvest.deactivating
+	from: 'Deactivating remote harvesting...'
+	  to: 'Deactivating delegated harvesting...'
+	 was: '停止激活...'
+
+changed texts.dashboard.importance.remoteHarvest.startRemoteHarvesting
+	from: 'Start remote harvesting'
+	  to: 'Start delegated harvesting'
+	 was: '开始远程收获'
+
+changed texts.dashboard.importance.remoteHarvest.stopRemoteHarvesting
+	from: 'Stop remote harvesting'
+	  to: 'Stop delegated harvesting'
+	 was: '停止远程收获'
+
+changed texts.harvestedBlocks.harvesting.remoteHarvest.startRemoteHarvesting
+	from: 'Start remote harvesting'
+	  to: 'Start delegated harvesting'
+	 was: '开启远程收获'
+
+changed texts.harvestedBlocks.harvesting.remoteHarvest.stopRemoteHarvesting
+	from: 'Stop remote harvesting'
+	  to: 'Stop delegated harvesting'
+	 was: '停止远程收获'
+
+translated texts.common.unknown
+	    from: 'Unknown status'
+	      to: '未知状态'
+	based on: texts.harvestedBlocks.harvesting.unknown
+
+translated texts.modals.showPrivateKey.publicKey
+	    from: 'Public key'
+	      to: '公钥'
+	based on: texts.modals.verifyRealAccountData.publicKey
+
+translated texts.modals.showPrivateKey.privateKey
+	    from: 'Private key'
+	      to: '私钥'
+	based on: texts.modals.verifyRealAccountData.privateKey
+
+-----changed texts.landing.carousel.items.[1].title
+	from: 'NCC encrypts your wallet'
+	  to: 'Remote NEM Infrastructure Server'
+	 was: 'NCC 加密你的钱包'
+
+changed texts.landing.carousel.items.[1].description
+	from: '<em>Wallet security</em> is very important to avoid the theft of XEM &amp; assets.'
+	  to: 'By using a remote NIS you don\'t have to synchronise the blockchain at start-up.'
+	 was: ' 为避免XEM被盗，加密是<em>安全</em>的有效保证 &amp;。'
+
+-----changed texts.modals.sendNem.successMessage
+	from: 'Transaction has been sent successfully! <br><span class="dimmed">tx hash {{1}}</span>'
+	  to: 'Your transaction has been sent successfully! <br><br>Transaction hash: {{1}}'
+	 was: '交易发送成功!'
+
+translated texts.common.multisigFee
+	    from: 'Multisig fee'
+	      to: '多重签名费用'
+	based on: texts.modals.sendNem.multisigFee
+
+translated texts.common.useMinimumFee
+	    from: 'Use minimum fee'
+	      to: '支付最小费用'
+	based on: texts.modals.sendNem.useMinimumFee
+
+translated texts.common.feeValidation
+	    from: 'Fee must not be less than the minimum fee'
+	      to: '无效费用值，必须填入等于或高于最小费用的值。'
+	based on: texts.modals.sendNem.feeValidation
+
+translated texts.common.cancelButton
+	    from: 'Cancel'
+	      to: '取消'
+	based on: texts.modals.sendNem.txConfirm.cancel
+
+translated texts.common.sendButton
+	    from: 'Send'
+	      to: '发送'
+	based on: texts.modals.sendNem.send
+
+translated texts.common.account
+	    from: 'Account'
+	      to: '帐户'
+	based on: texts.modals.stopRemote.account
+
+translated texts.common.thisAccount
+	    from: 'This account'
+	      to: '本账户'
+	based on: texts.modals.sendNem.thisAccount
+
+translated texts.common.warning
+	    from: 'Warning'
+	      to: '警告'
+	based on: texts.modals.deactivateDelegated.warning
+
+translated texts.transactionTypes.[5]
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.[3]
+
+translated texts.transactionTypes.[6]
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.[3]
+
+translated texts.dashboard.importance.remoteHarvest.title
+	    from: 'Delegated harvesting'
+	      to: '委托收获'
+	based on: texts.landing.carousel.items.[2].title
+
+-----translated texts.transactionTypes.20
+	    from: 'TRANSFER TRANSACTION'
+	      to: '传输交互'
+	based on: texts.transactionTypes.[0]
+
+translated texts.transactionTypes.21
+	    from: 'IMPORTANCE TRANSFER'
+	      to: '重要性传输'
+	based on: texts.transactionTypes.[1]
+
+translated texts.transactionTypes.22
+	    from: 'MODIFICATION OF MULTISIG ACCOUNT'
+	      to: '多重签名账户变更'
+	based on: texts.transactionTypes.[2]
+
+translated texts.transactionTypes.40
+	    from: 'MULTISIG SIGNATURE'
+	      to: 'MULTISIG SIGNATURE'
+	based on: texts.transactionTypes.[4]
+
+translated texts.transactionTypes.50
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.[6]
+
+translated texts.transactionTypes.51
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.[6]
+
+translated texts.transactionTypes.52
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.[6]
+
+-----translated texts.faults.1203
+	    from: 'The provided deadline is in the past. The deadline must be provided within a 1 day period.'
+	      to: '所提供的截止日期过早。必须输入1天以内的日期作为截止日期。'
+	based on: texts.faults.701
+
+translated texts.faults.1204
+	    from: 'The provided deadline is too far in the future. The deadline must be within one day time period.'
+	      to: '所提供的截止日期过晚。必须输入1天以内的日期作为截止日期。'
+	based on: texts.faults.702
+
+translated texts.faults.1205
+	    from: 'Your account does not have the right balance to make this transaction.'
+	      to: '您的账户余额不足，无法发起该交互。'
+	based on: texts.faults.703
+
+translated texts.faults.1206
+	    from: 'The provided message text is too large to be sent. Please try to reduce the length of the message.'
+	      to: '提供消息的文本太大，无法通过XEM发送。请减少消息的长度。'
+	based on: texts.faults.704
+
+translated texts.faults.1207
+	    from: 'The transaction hash already exists in the database or in the list of unconfirmed transactions.'
+	      to: '数据库或交易清单中已经存在此交易的hash值。'
+	based on: texts.faults.705
+
+translated texts.faults.1208
+	    from: 'The signature of the transaction could not be verified.'
+	      to: '无法验证本次交易的签名。'
+	based on: texts.faults.706
+
+translated texts.faults.1209
+	    from: 'The time stamp of the transaction is too far in the past.'
+	      to: '此交易ID的时间戳不合法，时间过早。'
+	based on: texts.faults.707
+
+translated texts.faults.1210
+	    from: 'The time stamp of the transaction is too far in the future.'
+	      to: '此交易ID的时间戳不合法，时间过晚。'
+	based on: texts.faults.708
+
+translated texts.faults.1219
+	    from: 'The transaction was rejected because the transaction cache is too full. A higher fee improves the chance that the transaction gets accepted.'
+	      to: '交互缓存耗尽，交互被拒绝。网络繁忙时高手续费优先处理。 '
+	based on: texts.faults.710
+
+translated texts.faults.1262
+	    from: 'Delegated harvesting account has non zero balance and cannot be used.'
+	      to: '申请委托收获的账户具有非0余额，无法开启。'
+	based on: texts.faults.731
+
+translated texts.faults.1263
+	    from: 'Importance transfer rejected. There is already pending importance transfer operation.'
+	      to: '重要性传输被拒绝，已有等待中重要性传输操作。 '
+	based on: texts.faults.732
+
+translated texts.faults.1264
+	    from: 'Delegated harvesting is already active.'
+	      to: '委托收获已激活。'
+	based on: texts.faults.733
+
+translated texts.faults.1265
+	    from: 'Delegated harvesting is NOT active. Cannot deactivate.'
+	      to: '委托收获未被激活，无法取消激活。'
+	based on: texts.faults.734
+
+translated texts.faults.1266
+	    from: 'Importance transfer transaction (delegated harvesting) conflicts with existing transaction.'
+	      to: '重要性传输交互 (委托收获) 与现有交互冲突。'
+	based on: texts.faults.730
+
+translated texts.faults.1271
+	    from: 'Multisig signature transaction rejected. Current account is not a cosignatory of a multisig account.'
+	      to: '多重签名签名交互被拒绝。当前账户不是此多重签名交互的合法共同签署人账号。'
+	based on: texts.faults.741
+
+translated texts.faults.1273
+	    from: 'Multisig signature transaction rejected. Associated multisig transaction is not known to NEM network'
+	      to: '多重签名签名交互被拒绝。相关多重签名交互在NEM网络中未公知。'
+	based on: texts.faults.742
+
+translated texts.faults.1274
+	    from: 'Transaction is not allowed for multisig account.'
+	      to: '多重签名账号不可发起交互。'
+	based on: texts.faults.740
+
+translated texts.faults.1275
+	    from: 'Multisig account modification rejected. One of added accounts is already a cosignatory.'
+	      to: '多重签名账户变更被拒绝。一个待加入账号已是共同签署人。'
+	based on: texts.faults.743
+
+translated texts.faults.1321
+	    from: 'The account is unknown. An account needs to be part of at least one transaction (sender or recipient) to be known to the network.'
+	      to: '该帐户未知。一个帐户需要至少完成一个交易（作为发件人或收件人）才能被网络公知。'
+	based on: texts.faults.709
+
+translated texts.transactionTypes.53
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.52
+
+translated texts.transactionTypes.54
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.52
+
+translated texts.transactionTypes.55
+	    from: 'MULTISIG TRANSACTION'
+	      to: '多重签名交互'
+	based on: texts.transactionTypes.52
+
+-----changed texts.dashboard.assets.title
+	from: 'Your Assets'
+	  to: 'Your Mosaics'
+	 was: '你的资产'
+
+translated texts.namespacesmosaics.balance
+	    from: 'Current Balance'
+	      to: '目前余额'
+	based on: texts.transactions.balance
+
+translated texts.namespacesmosaics.table.columns.[0]
+	    from: ''
+	      to: ''
+	based on: texts.transactions.table.columns.[4]
+
+-----

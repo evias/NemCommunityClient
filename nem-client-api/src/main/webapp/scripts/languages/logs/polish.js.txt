@@ -1,0 +1,686 @@
+changed texts.faults.101
+	from: 'File not found.'
+	  to: 'The wallet file does not exist.'
+	 was: 'Plik nie odnaleziony.'
+
+changed texts.faults.103
+	from: 'Wallet file is corrupted. Please recover your wallet from a backup.'
+	  to: 'Wallet file is corrupt. Please recover your wallet from a backup.'
+	 was: 'Plik portfela jest uszkodzony. Odzyskaj portfel używając backupu, który powinieneś zrobić podczas tworzenia portfela.'
+
+changed texts.faults.104
+	from: 'The provided password is not correct.'
+	  to: 'The provided password for the wallet is not correct.'
+	 was: 'Podane hasło jest nieprawidłowe. Miejmy nadzieję, że przypomnisz sobie właściwe hasło. Raz zgubione, nie może zostać odtworzone!'
+
+changed texts.wallet.nav.[2]
+	from: 'Contacts'
+	  to: 'Address Book'
+	 was: 'Kontakty'
+
+translated texts.common.password
+	    from: 'Password'
+	      to: 'Hasło'
+	based on: texts.landing.main.passwordPlh
+
+translated texts.common.address
+	    from: 'Address'
+	      to: 'Adres'
+	based on: texts.modals.verifyRealAccountData.address
+
+translated texts.common.privateLabel
+	    from: 'Private label'
+	      to: 'Etykieta'
+	based on: texts.modals.createAccount.label
+
+translated texts.transactionDirections.pending
+	    from: 'Pending transaction'
+	      to: 'Transakcja oczekująca'
+	based on: texts.transactions.table.types.pending
+
+translated texts.transactionDirections.outgoing
+	    from: 'Outgoing transaction'
+	      to: 'Transakcja wychodząca'
+	based on: texts.transactions.table.types.outgoing
+
+translated texts.transactionDirections.incoming
+	    from: 'Incoming transaction'
+	      to: 'Transakcja przychodząca'
+	based on: texts.transactions.table.types.incoming
+
+translated texts.transactionDirections.self
+	    from: 'Self transaction'
+	      to: 'Transakcja wewnętrzna'
+	based on: texts.transactions.table.types.self
+
+translated texts.modals.multisig.labelDesc
+	    from: 'This account is labeled as {{1}}'
+	      to: 'To konto jest oznaczone jako {{1}}'
+	based on: texts.modals.sendNem.labelDesc
+
+translated texts.modals.multisig.nullLabelDesc
+	    from: "This account doesn't have a label"
+	      to: "To konto nie ma etykiety"
+	based on: texts.modals.sendNem.nullLabelDesc
+
+translated texts.modals.multisig.cancel
+	    from: 'Cancel'
+	      to: 'Anuluj'
+	based on: texts.modals.sendNem.txConfirm.cancel
+
+translated texts.modals.multisig.fee
+	    from: 'Fee'
+	      to: 'Opłata'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.modals.multisig.feeValidation
+	    from: 'Fee must not be less than the minimum fee'
+	      to: 'Opłata nie może być niższa, niż minimalna opłata'
+	based on: texts.modals.sendNem.feeValidation
+
+translated texts.modals.multisig.dueBy
+	    from: 'Due by'
+	      to: 'Ważne przez'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.modals.multisig.useMinimumFee
+	    from: 'Use minimum fee'
+	      to: 'Użyj minimalnej opłaty'
+	based on: texts.modals.sendNem.useMinimumFee
+
+translated texts.modals.multisig.hours
+	    from: 'hour(s)'
+	      to: 'godzin(y)'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.modals.signMultisig.fee
+	    from: 'Fee'
+	      to: 'Opłata'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.modals.signMultisig.feeValidation
+	    from: 'Fee must not be less than the minimum fee'
+	      to: 'Opłata nie może być niższa, niż minimalna opłata'
+	based on: texts.modals.sendNem.feeValidation
+
+translated texts.modals.signMultisig.dueBy
+	    from: 'Due by'
+	      to: 'Ważne przez'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.modals.signMultisig.useMinimumFee
+	    from: 'Use minimum fee'
+	      to: 'Użyj minimalnej opłaty'
+	based on: texts.modals.sendNem.useMinimumFee
+
+translated texts.modals.signMultisig.hours
+	    from: 'hour(s)'
+	      to: 'godzin(y)'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.modals.signMultisig.password
+	    from: 'Password'
+	      to: 'Hasło'
+	based on: texts.landing.main.passwordPlh
+
+translated texts.modals.signMultisig.passwordValidation
+	    from: 'Password must not be blank'
+	      to: 'Password must not be blank'
+	based on: texts.modals.sendNem.passwordValidation
+
+translated texts.modals.signMultisig.send
+	    from: 'Send'
+	      to: 'Wyślij'
+	based on: texts.modals.sendNem.send
+
+translated texts.modals.signMultisig.cancel
+	    from: 'Cancel'
+	      to: 'Anuluj'
+	based on: texts.modals.sendNem.txConfirm.cancel
+
+translated texts.modals.signMultisig.sending
+	    from: 'Sending...'
+	      to: 'Wysyłanie...'
+	based on: texts.modals.sendNem.txConfirm.sending
+
+translated texts.modals.signMultisig.successMessage
+	    from: 'Transaction has been sent successfully!'
+	      to: 'Transakcja została zrealizowana!'
+	based on: texts.modals.sendNem.successMessage
+
+translated texts.modals.signMultisig.txConfirm.amount
+	    from: 'Amount'
+	      to: 'Ilość'
+	based on: texts.transactions.table.columns.[8]
+
+translated texts.modals.signMultisig.txConfirm.to
+	    from: 'To'
+	      to: 'Do'
+	based on: texts.modals.sendNem.txConfirm.to
+
+translated texts.modals.signMultisig.txConfirm.fee
+	    from: 'Fee'
+	      to: 'Opłata'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.modals.signMultisig.txConfirm.dueBy
+	    from: 'Due by'
+	      to: 'Ważne przez'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.modals.signMultisig.txConfirm.hours
+	    from: 'hour(s)'
+	      to: 'godzin(y)'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.modals.signMultisig.txConfirm.total
+	    from: 'Total'
+	      to: 'Suma'
+	based on: texts.modals.sendNem.txConfirm.total
+
+translated texts.modals.signMultisig.txConfirm.message
+	    from: 'Message'
+	      to: 'Wiadomość'
+	based on: texts.transactions.table.columns.[3]
+
+translated texts.modals.signMultisig.txConfirm.encrypted
+	    from: 'Message is encrypted'
+	      to: 'Wiadomość jest zaszyfrowana'
+	based on: texts.transactions.table.encrypted
+
+translated texts.modals.signMultisig.txConfirm.noMessage
+	    from: 'No message'
+	      to: 'Brak wiadomości'
+	based on: texts.transactions.table.noMessage
+
+translated texts.modals.sendNem.sender
+	    from: 'Sender'
+	      to: 'Nadawca'
+	based on: texts.modals.transactionDetails.sender
+
+translated texts.modals.addContact.add
+	    from: 'Add'
+	      to: 'Dodaj'
+	based on: texts.modals.addAccount.add
+
+translated texts.modals.editContact.saveChanges
+	    from: 'Save changes'
+	      to: 'Zapisz zmiany'
+	based on: texts.settings.save
+
+translated texts.modals.removeContact.remove
+	    from: 'Remove'
+	      to: 'Usuń'
+	based on: texts.modals.removeAccount.remove
+
+translated texts.addressBook.sendNem
+	    from: 'Send NEM'
+	      to: 'Wyślij NEM'
+	based on: texts.transactions.sendNem
+
+translated texts.addressBook.remove
+	    from: 'Remove'
+	      to: 'Usuń'
+	based on: texts.modals.removeAccount.remove
+
+-----translated texts.common.passwordValidation
+	    from: 'Password must not be blank'
+	      to: 'Password must not be blank'
+	based on: texts.modals.sendNem.passwordValidation
+
+translated texts.modals.multisig.txConfirm.total
+	    from: 'Total'
+	      to: 'Suma'
+	based on: texts.modals.sendNem.txConfirm.total
+
+translated texts.modals.transactionDetails.cosignatory
+	    from: 'Cosignatory'
+	      to: 'Cosignatory'
+	based on: texts.modals.signMultisig.sender
+-----translated texts.modals.signMultisig.original.from
+	    from: 'Multisig account'
+	      to: 'Multisig account'
+	based on: texts.modals.signMultisig.txConfirm.from
+
+translated texts.modals.signMultisig.original.to
+	    from: 'Recipient'
+	      to: 'Odbiorca'
+	based on: texts.modals.transactionDetails.recipient
+
+translated texts.modals.signMultisig.original.amount
+	    from: 'Amount'
+	      to: 'Ilość'
+	based on: texts.transactions.table.columns.[8]
+
+translated texts.modals.signMultisig.multisigTotal
+	    from: 'Total'
+	      to: 'Suma'
+	based on: texts.modals.sendNem.txConfirm.total
+
+----------changed texts.wallet.actions.convertMultisig
+	from: 'Convert to multisig'
+	  to: 'Convert other account to multisig'
+	 was: 'Convert to multisig'
+
+-----changed texts.faults.305
+	from: 'NEM Infrastructure Server is not available.'
+	  to: 'The NEM Infrastructure Server (NIS) is not available.\n\nTry to restart the NEM software.\n\nIf you are using a remote NIS, check your configured host for typing errors or use another remote NIS.'
+	 was: 'Serwer Infrastruktury NEM jest niedostępny.'
+
+changed texts.wallet.actions.convertMultisig
+	from: 'Convert to multisig'
+	  to: 'Convert other account to multisig'
+	 was: 'Convert other account to multisig'
+
+-----
+changed texts.faults.305
+	from: 'NEM Infrastructure Server is not available.'
+	  to: 'The NEM Infrastructure Server (NIS) is not available.\n\nTry to restart the NEM software.\n\nIf you are using a remote NIS, check your configured host for typing errors or use another remote NIS.'
+	 was: 'The NEM Infrastructure Server (NIS) is not available.\n\nTry to restart the NEM software.\n\nIf you are using a remote NIS, check your configured host for typing errors or use another remote NIS.'
+
+changed texts.faults.602
+	from: 'Cannot perform any operations until db is fully loaded.'
+	  to: 'Almost ready. NEM Infrastructure Server is currently loading blocks. Wallet will be functional when db is fully loaded.'
+	 was: 'Nie można wykonać żadnych operacji przed pełnym załadowaniem bazy danych.'
+
+changed texts.modals.multisig.warning
+	from: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. most likely you <b>DO NOT</b> want to do that.'
+	  to: 'Multisig account is on the list of cosignatories. This will result in locking down the account cutting off access to the fund. Most likely you <b>DO NOT</b> want to do that.'
+	 was: 'Konto multisig jest na liście sygnatariuszy. To spowoduje zamknięcie konta i odcięcie dostępu do funduszy. Prawdopodobnie <b>NIE</b> chcesz tego zrobić.'
+
+changed texts.wallet.actions.convertMultisig
+	from: 'Convert to multisig'
+	  to: 'Convert other account to multisig'
+	 was: 'Convert other account to multisig'
+
+changed texts.harvestedBlocks.table.columns.[2]
+	from: 'Block hash'
+	  to: 'Block difficulty'
+	 was: 'Hash bloku'
+
+-----translated texts.common.fee
+	    from: 'Fee'
+	      to: 'Opłata'
+	based on: texts.harvestedBlocks.table.columns.[3]
+
+translated texts.common.dueBy
+	    from: 'Due by'
+	      to: 'Ważne przez'
+	based on: texts.modals.sendNem.txConfirm.dueBy
+
+translated texts.common.hours
+	    from: 'hour(s)'
+	      to: 'godzin(y)'
+	based on: texts.modals.sendNem.txConfirm.hours
+
+translated texts.common.hoursDue
+	    from: 'Due by (hours)'
+	      to: 'Wykonaj w ciągu (godziny)'
+	based on: texts.modals.deactivateRemote.hoursDue
+
+translated texts.modals.removeAccount.account
+	    from: 'Account'
+	      to: 'Konto'
+	based on: texts.modals.stopRemote.account
+
+translated texts.modals.removeAccount.label
+	    from: 'Account label'
+	      to: 'Etykieta'
+	based on: texts.modals.changeAccountLabel.label
+
+translated texts.dashboard.transactions.accountCosignatories
+	    from: 'Multisig account'
+	      to: 'Konto multisig'
+	based on: texts.modals.signMultisig.original.from
+
+-----changed texts.faults.703
+	from: 'Your account does not have the right balance to send the provided amount of XEM.'
+	  to: 'Your account does not have the right balance to make this transaction.'
+	 was: 'Nie masz wystarczających środków na koncie aby dokonać transakcji.'
+
+changed texts.faults.730
+	from: 'Importance transfer transaction (secure harvesting) conflicts with existing transaction.'
+	  to: 'Importance transfer transaction (delegated harvesting) conflicts with existing transaction.'
+	 was: 'Transakcja transferu znaczenia (bezpieczne zbieranie) jest w konflikcie z istniejącą transkcją.'
+
+changed texts.faults.731
+	from: 'Secure harvesting account has non zero balance and cannot be used.'
+	  to: 'Delegated harvesting account has non zero balance and cannot be used.'
+	 was: 'Konto bezpiecznego zbierania ma niezerowe saldo i nie może być użyte.'
+
+changed texts.faults.733
+	from: 'Secure harvesting is already active.'
+	  to: 'Delegated harvesting is already active.'
+	 was: 'Bezpieczne zbieranie jest już aktywne.'
+
+changed texts.faults.734
+	from: 'Secure harvesting is NOT active. Cannot deactivate.'
+	  to: 'Delegated harvesting is NOT active. Cannot deactivate.'
+	 was: 'Bezpieczne zbieranie NIE jest aktywne. Nie można wyłączyć.'
+
+changed texts.modals.bootLocalNode.warningText
+	from: 'You\'re trying to boot a node using account with balance: ({{{1}}} XEM). This will reveal this account\'s private key to node: <u>{{2}}</u>'
+	  to: 'You\'re trying to boot a node <u>{{2}}</u><br/><br/>Booting remote node is currently impossible from within NCC.'
+	 was: 'You\'re trying to boot a node using account with balance: ({{{1}}} XEM). This will reveal this account\'s private key to node: {{2}}'
+
+changed texts.modals.activateRemote.title
+	from: 'Activate Remote Harvesting'
+	  to: 'Activate Delegated Harvesting'
+	 was: 'Aktywuj zdalne zbieranie bloków'
+
+changed texts.modals.deactivateRemote.title
+	from: 'Deactivate Remote Harvesting'
+	  to: 'Deactivate Delegated Harvesting'
+	 was: 'Deaktywuj zdalne zbieranie bloków'
+
+changed texts.modals.startRemote.title
+	from: 'Start Remote Harvesting'
+	  to: 'Start Delegated Harvesting'
+	 was: 'Rozpocznij zdalne zbieranie bloków'
+
+changed texts.modals.stopRemote.title
+	from: 'Stop Remote Harvesting'
+	  to: 'Stop Delegated Harvesting'
+	 was: 'Zatrzymaj zdalne zbieranie bloków'
+
+changed texts.modals.logoutWarning.leavePage
+	from: "You're leaving your wallet. Remember that if you leave your wallet this way, some others may still be able to access your wallet from this computer.\n\nTo prevent that from happening, please log out using the \"Close wallet\" menu item in the top-right dropdown menu before you close the browser tab or navigate away."
+	  to: "You're leaving your wallet. Remember that if you leave your wallet this way, some others may still be able to access your wallet from this computer. To prevent that from happening, please log out using the \"Close wallet\" menu item in the top-right dropdown menu before you close the browser tab or navigate away."
+	 was: "Zostawiasz swój portfel. Pamiętaj, że kiedy zostawiasz swój portfel w ten sposób, ktoś inny może uzyskać dostęp do twojego porfela na tym komputerze.\n\nAby temu zapobiec, proszę się wylogować używając przycisku \"Zamknij portfel\" z menu w prawym, górym rogu, zanim opuścisz tą stronę."
+
+changed texts.landing.about.sections.[1].paragraphs.[1]
+	from: 'The more <strong>NIS</strong> the better the security.'
+	  to: 'The more <strong>NIS</strong> there are in the network, the better the security.,'
+	 was: 'Im więcej uruchomionych <strong>NIS</strong> tym większe bezpieczeństwo.'
+
+changed texts.dashboard.importance.remoteHarvest.activate
+	from: 'Activate remote harvesting'
+	  to: 'Activate delegated harvesting'
+	 was: 'Aktywuj zdalne zbieranie bloków'
+
+changed texts.dashboard.importance.remoteHarvest.activating
+	from: 'Activating remote harvesting...'
+	  to: 'Activating delegated harvesting...'
+	 was: 'Aktywowanie zdalnego zbierania bloków...'
+
+changed texts.dashboard.importance.remoteHarvest.active
+	from: 'Remote harvesting is active'
+	  to: 'Delegated harvesting is active'
+	 was: 'Zdalne zbieranie jest aktywne'
+
+changed texts.dashboard.importance.remoteHarvest.deactivate
+	from: 'Deactivate remote harvesting'
+	  to: 'Deactivate delegated harvesting'
+	 was: 'Wyłącz zdalne zbieranie bloków'
+
+changed texts.dashboard.importance.remoteHarvest.deactivating
+	from: 'Deactivating remote harvesting...'
+	  to: 'Deactivating delegated harvesting...'
+	 was: 'Wyłączanie zdalnego zbierania bloków...'
+
+changed texts.dashboard.importance.remoteHarvest.startRemoteHarvesting
+	from: 'Start remote harvesting'
+	  to: 'Start delegated harvesting'
+	 was: 'Rozpocznij zdalne zbieranie bloków'
+
+changed texts.dashboard.importance.remoteHarvest.stopRemoteHarvesting
+	from: 'Stop remote harvesting'
+	  to: 'Stop delegated harvesting'
+	 was: 'Zatrzymaj zdalne zbieranie bloków'
+
+changed texts.harvestedBlocks.harvesting.remoteHarvest.startRemoteHarvesting
+	from: 'Start remote harvesting'
+	  to: 'Start delegated harvesting'
+	 was: 'Zacznij zdalne zbieranie'
+
+changed texts.harvestedBlocks.harvesting.remoteHarvest.stopRemoteHarvesting
+	from: 'Stop remote harvesting'
+	  to: 'Stop delegated harvesting'
+	 was: 'Zakończ zdalne zbieranie'
+
+translated texts.common.unknown
+	    from: 'Unknown status'
+	      to: 'Status nieznany'
+	based on: texts.harvestedBlocks.harvesting.unknown
+
+translated texts.modals.showPrivateKey.publicKey
+	    from: 'Public key'
+	      to: 'Klucz publiczny'
+	based on: texts.modals.verifyRealAccountData.publicKey
+
+translated texts.modals.showPrivateKey.privateKey
+	    from: 'Private key'
+	      to: 'Klucz prywatny'
+	based on: texts.modals.verifyRealAccountData.privateKey
+
+-----changed texts.landing.carousel.items.[1].title
+	from: 'NCC encrypts your wallet'
+	  to: 'Remote NEM Infrastructure Server'
+	 was: 'NCC szyfruje Twój portfel'
+
+changed texts.landing.carousel.items.[1].description
+	from: '<em>Wallet security</em> is very important to avoid the theft of XEM &amp; assets.'
+	  to: 'By using a remote NIS you don\'t have to synchronise the blockchain at start-up.'
+	 was: '<em>Bezpieczeństwo</em> jest bardzo ważne aby uniknąć kradzieży monet XEM i aktywów..'
+
+-----changed texts.modals.sendNem.successMessage
+	from: 'Transaction has been sent successfully! <br><span class="dimmed">tx hash {{1}}</span>'
+	  to: 'Your transaction has been sent successfully! <br><br>Transaction hash: {{1}}'
+	 was: 'Transakcja została zrealizowana!'
+
+translated texts.common.multisigFee
+	    from: 'Multisig fee'
+	      to: 'Opłata multisig'
+	based on: texts.modals.sendNem.multisigFee
+
+translated texts.common.useMinimumFee
+	    from: 'Use minimum fee'
+	      to: 'Użyj minimalnej opłaty'
+	based on: texts.modals.sendNem.useMinimumFee
+
+translated texts.common.feeValidation
+	    from: 'Fee must not be less than the minimum fee'
+	      to: 'Opłata nie może być niższa, niż minimalna opłata'
+	based on: texts.modals.sendNem.feeValidation
+
+translated texts.common.cancelButton
+	    from: 'Cancel'
+	      to: 'Anuluj'
+	based on: texts.modals.sendNem.txConfirm.cancel
+
+translated texts.common.sendButton
+	    from: 'Send'
+	      to: 'Wyślij'
+	based on: texts.modals.sendNem.send
+
+translated texts.common.account
+	    from: 'Account'
+	      to: 'Konto'
+	based on: texts.modals.stopRemote.account
+
+translated texts.common.thisAccount
+	    from: 'This account'
+	      to: 'To konto'
+	based on: texts.modals.sendNem.thisAccount
+
+translated texts.common.warning
+	    from: 'Warning'
+	      to: 'Ostrzezenie'
+	based on: texts.modals.deactivateDelegated.warning
+
+translated texts.transactionTypes.[5]
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.[3]
+
+translated texts.transactionTypes.[6]
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.[3]
+
+translated texts.dashboard.importance.remoteHarvest.title
+	    from: 'Delegated harvesting'
+	      to: 'Delegowane zbieranie'
+	based on: texts.landing.carousel.items.[2].title
+
+-----translated texts.transactionTypes.20
+	    from: 'TRANSFER TRANSACTION'
+	      to: 'TRANSFER TRANSAKCJI'
+	based on: texts.transactionTypes.[0]
+
+translated texts.transactionTypes.21
+	    from: 'IMPORTANCE TRANSFER'
+	      to: 'TRANSFER ZNACZENIA'
+	based on: texts.transactionTypes.[1]
+
+translated texts.transactionTypes.22
+	    from: 'MODIFICATION OF MULTISIG ACCOUNT'
+	      to: 'MODYFIKACJA KONTA MULTISIG'
+	based on: texts.transactionTypes.[2]
+
+translated texts.transactionTypes.40
+	    from: 'MULTISIG SIGNATURE'
+	      to: 'MULTISIG SIGNATURE'
+	based on: texts.transactionTypes.[4]
+
+translated texts.transactionTypes.50
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.[6]
+
+translated texts.transactionTypes.51
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.[6]
+
+translated texts.transactionTypes.52
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.[6]
+
+-----translated texts.faults.1203
+	    from: 'The provided deadline is in the past. The deadline must be provided within a 1 day period.'
+	      to: 'Podany termin jest w przeszłości. Termin musi się zawierać w okresie jednego dnia.'
+	based on: texts.faults.701
+
+translated texts.faults.1204
+	    from: 'The provided deadline is too far in the future. The deadline must be within one day time period.'
+	      to: 'Podany termin jest zbyt daleko w przyszłości. Termin musi się zawierać w okresie jednego dnia.'
+	based on: texts.faults.702
+
+translated texts.faults.1205
+	    from: 'Your account does not have the right balance to make this transaction.'
+	      to: 'Twoje konto nie ma wystarczajacych srodkow aby wykonac ta transakcje.'
+	based on: texts.faults.703
+
+translated texts.faults.1206
+	    from: 'The provided message text is too large to be sent. Please try to reduce the length of the message.'
+	      to: 'Wiadomość jest zbyt długa. Spróbuj ją skrócić.'
+	based on: texts.faults.704
+
+translated texts.faults.1207
+	    from: 'The transaction hash already exists in the database or in the list of unconfirmed transactions.'
+	      to: 'Skrót (hash) transakcji istnieje już w bazie danych lub na liście niepotwierdzonych transakcji.'
+	based on: texts.faults.705
+
+translated texts.faults.1208
+	    from: 'The signature of the transaction could not be verified.'
+	      to: 'Sygnatura transakcji nie mogła zostać zweryfikowana.'
+	based on: texts.faults.706
+
+translated texts.faults.1209
+	    from: 'The time stamp of the transaction is too far in the past.'
+	      to: 'Sygnatura czasowa transakcji jest zbyt daleko w przeszłości.'
+	based on: texts.faults.707
+
+translated texts.faults.1210
+	    from: 'The time stamp of the transaction is too far in the future.'
+	      to: 'Sygnatura czasowa transakcji jest zbyt daleko w przyszłości.'
+	based on: texts.faults.708
+
+translated texts.faults.1219
+	    from: 'The transaction was rejected because the transaction cache is too full. A higher fee improves the chance that the transaction gets accepted.'
+	      to: 'Transakcja została odrzucona ponieważ bufor jest przepełniony. Wyzsza opłata transakcyjna zwiększa szanse na zaakceptowanie transakcji.'
+	based on: texts.faults.710
+
+translated texts.faults.1262
+	    from: 'Delegated harvesting account has non zero balance and cannot be used.'
+	      to: 'Konto delegowanego zbierania ma niezerowe saldo i nie moze byc uzyte.'
+	based on: texts.faults.731
+
+translated texts.faults.1263
+	    from: 'Importance transfer rejected. There is already pending importance transfer operation.'
+	      to: 'Przekazanie znaczenia odrzucone. Istnieje już oczekująca operacja przekazania znaczenia.'
+	based on: texts.faults.732
+
+translated texts.faults.1264
+	    from: 'Delegated harvesting is already active.'
+	      to: 'Delegowane zbieranie jest juz aktywne.'
+	based on: texts.faults.733
+
+translated texts.faults.1265
+	    from: 'Delegated harvesting is NOT active. Cannot deactivate.'
+	      to: 'Delegowane zbieranie NIE jest aktywne. Nie mozna deaktywowac.'
+	based on: texts.faults.734
+
+translated texts.faults.1266
+	    from: 'Importance transfer transaction (delegated harvesting) conflicts with existing transaction.'
+	      to: 'Transakcja transferu waznosci (delegowane zbieranie) jest w konflikcie z istniejaca transakcja.'
+	based on: texts.faults.730
+
+translated texts.faults.1271
+	    from: 'Multisig signature transaction rejected. Current account is not a cosignatory of a multisig account.'
+	      to: 'Podpis transkacji multisig odrzucony. Bieżące konto nie jest sygnatariuszem konta multisig.'
+	based on: texts.faults.741
+
+translated texts.faults.1273
+	    from: 'Multisig signature transaction rejected. Associated multisig transaction is not known to NEM network'
+	      to: 'Podpis transkacji multisig odrzucony. Transakcja nie jest znana sieci NEM'
+	based on: texts.faults.742
+
+translated texts.faults.1274
+	    from: 'Transaction is not allowed for multisig account.'
+	      to: 'Transakcja nie jest dozwolona dla konta multisig.'
+	based on: texts.faults.740
+
+translated texts.faults.1275
+	    from: 'Multisig account modification rejected. One of added accounts is already a cosignatory.'
+	      to: 'Modyfikacja konta multisig odrzucona. Jedno z dodanych kont jest juz sygnatariuszem.'
+	based on: texts.faults.743
+
+translated texts.faults.1321
+	    from: 'The account is unknown. An account needs to be part of at least one transaction (sender or recipient) to be known to the network.'
+	      to: 'Konto nieznane. Konto musi wziąć udział w przynajmniej jednej transakcji (wychodzącej lub przychodzącej) aby było znane sieci.'
+	based on: texts.faults.709
+
+translated texts.transactionTypes.53
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.52
+
+translated texts.transactionTypes.54
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.52
+
+translated texts.transactionTypes.55
+	    from: 'MULTISIG TRANSACTION'
+	      to: 'TRANSAKCJA MULTISIG'
+	based on: texts.transactionTypes.52
+
+-----changed texts.dashboard.assets.title
+	from: 'Your Assets'
+	  to: 'Your Mosaics'
+	 was: 'Twoje aktywa'
+
+translated texts.namespacesmosaics.balance
+	    from: 'Current Balance'
+	      to: 'Stan Konta'
+	based on: texts.transactions.balance
+
+translated texts.namespacesmosaics.table.columns.[0]
+	    from: ''
+	      to: ''
+	based on: texts.transactions.table.columns.[4]
+
+-----

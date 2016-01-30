@@ -1,0 +1,134 @@
+<main class="transactions-main">
+	<div class="container">
+		<section class="listingPage">
+			<div class="listingPage-head">
+				<h1 class="listingPage-title">{{texts.transactions.title}}</h1>
+				<button type="button" class="listingPage-mainButton transactionsPage-sendNemButton icon-paper-plane-empty" disabled="{{sendNemDisabled}}"  on-click="openSendNem()">{{texts.transactions.sendNem}}</button>
+				<div class="listingPage-searchArea">
+					<div class="listingPage-search">
+						<input class="listingPage-searchTextbox" type="text" />
+						<button class="listingPage-searchButton" type="submit" id="search-btn" class="icon-magnifying-glass-reverse"></button>
+					</div>
+				</div>
+				<div class="listingPage-overview">
+					<p class="listingPage-overview-title">{{texts.transactions.balance}}</p>
+					<p><span title="{{activeAccount.formattedBalanceInt}} XEM {{activeAccount.balanceDec}} µXEM" on-mouseover="registerToolTip">{{activeAccount.formattedBalance}} <span class="unit">XEM</span></span></p>
+				</div>
+			</div>
+			<div class="listingPage-body">
+				<div class="listingPage-filterBar">
+					<ul class="listingPage-filter">
+						<li class="listingPage-filterOption">
+                            <input type="radio" class="hidden" id="rad-transaction-filter-all" name="{{transactions.filter}}" value="account/transactions/confirmed" checked />
+                            <label class="listingPage-filterLabel" for="rad-transaction-filter-all">{{texts.transactions.filters.confirmed}}</label>
+						</li>
+						<li class="listingPage-filterOption">
+                            <input type="radio" class="hidden" id="rad-transaction-filter-pending" name="{{transactions.filter}}" value="account/transactions/unconfirmed" />
+                            <label class="listingPage-filterLabel" for="rad-transaction-filter-pending">{{texts.transactions.filters.unconfirmed}}</label>
+						</li>
+						<li class="listingPage-filterOption">
+                            <input type="radio" class="hidden" id="rad-transaction-filter-incoming" name="{{transactions.filter}}" value="account/transactions/incoming" />
+                            <label class="listingPage-filterLabel" for="rad-transaction-filter-incoming">{{texts.transactions.filters.incoming}}</label>
+						</li>
+						<li class="listingPage-filterOption">
+                            <input type="radio" class="hidden" id="rad-transaction-filter-outgoing" name="{{transactions.filter}}" value="account/transactions/outgoing" />
+							<label class="listingPage-filterLabel" for="rad-transaction-filter-outgoing">{{texts.transactions.filters.outgoing}}</label>
+						</li>
+					</ul>
+				</div>
+				<div class="listingPage-list listingPage-list--transactions">
+					<table class="txList">
+						<thead>
+							<tr class="txList-row transactionsPage-row">
+								<th class="txList-header txList-col--type transactionsPage-leftMost">{{texts.transactions.table.columns.0}}</th>
+								<th class="txList-header txList-col--date">{{texts.transactions.table.columns.1}}</th>
+								<th class="txList-header txList-col--sender">{{texts.transactions.table.columns.2}}</th>
+								<th class="txList-header txList-col--message">{{texts.transactions.table.columns.3}}</th>
+                                <th class="txList-header txList-col--amount transactionsPage-rightMost">{{texts.transactions.table.columns.8}} <span class="dimmed">(XEM)</span></th>
+								<th class="txList-header txList-col--encrypted encryptedIcon">{{texts.transactions.table.columns.4}}</th>
+								<th class="txList-header">{{texts.transactions.table.columns.5}}</th>
+								<th class="txList-header txList-col--confirmations">{{texts.transactions.table.columns.6}}</th>
+								<th class="txList-header txList-col--fee">{{texts.transactions.table.columns.7}} <span class="dimmed">(XEM)</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each transactions.filtered}}
+								<tr class="txList-row">
+                                    {{#if (.type === TransactionType.Transfer || .type === TransactionType.Multisig_Transfer)}}
+                                    {{>transferTransactionLinePartial}}
+                                    {{/if}}
+
+                                    {{#if (.type === TransactionType.Importance_Transfer || .type === TransactionType.Multisig_Importance_Transfer)}}
+                                    {{>importanceTransferLinePartial}}
+                                    {{/if}}
+
+                                    {{#if (.type === TransactionType.Aggregate_Modification || .type === TransactionType.Multisig_Aggregate_Modification)}}
+                                    {{>aggregateModificationLinePartial}}
+                                    {{/if}}
+
+                                    {{#if (.type === TransactionType.Provision_Namespace || .type === TransactionType.Multisig_Provision_Namespace)}}
+                                    {{>provisionNamespaceLinePartial}}
+                                    {{/if}}
+
+                                    {{#if (.type === TransactionType.Mosaic_Creation || .type === TransactionType.Multisig_Mosaic_Creation)}}
+                                    {{>mosaicCreationLinePartial}}
+                                    {{/if}}
+
+                                    {{#if (.type === TransactionType.Mosaic_Supply || .type === TransactionType.Multisig_Mosaic_Supply)}}
+                                    {{>mosaicSupplyLinePartial}}
+                                    {{/if}}
+
+									<td class="txList-cell txList-col--encrypted encryptedIcon">
+										{{#.encrypted}}
+											<span class="icon-lock" title="{{texts.transactions.table.encrypted}}" on-mouseover="registerToolTip"></span>
+										{{/}}
+									</td>
+
+                                    {{! FIELD DETAILS }}
+									<td class="txList-cell txList-col--details">
+										<a class="hyperlink--default" href="javascript:;" on-click="viewTransaction(.)">{{texts.transactions.table.view}}</a>
+									</td>
+
+                                    {{! FIELD CONFIRMATIONS }}
+                                    <td class="txList-col--confirmations">
+										{{#if .confirmed}}
+											{{#if blockchainHeight}}
+												{{blockchainHeight - .blockHeight + 1}}
+											{{else}}
+												{{texts.dashboard.transactions.confirmationsUnknown}}
+											{{/if}}
+										{{else}}
+											{{texts.dashboard.transactions.pending}}
+										{{/if}}
+									</td>
+
+                                    {{! FIELD FEES }}
+                                    <td class="txList-cell txList-col--fee transactionsPage-rightMost">
+										{{#if .isMultisig}}
+                                            {{#if .confirmed}}
+                                                {{{multisig.formattedTotalFees}}}
+                                            {{else}}
+                                                n/a
+                                            {{/if}}
+										{{else}}
+											{{#.isOutgoing || .isSelf}}-{{/}}{{{formattedFee}}}
+										{{/if}}
+									</td>
+
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+					{{^transactions.filtered}}
+						<p class="txList-noRecords transactionsPage-leftMost transactionsPage-rightMost">{{texts.transactions.table.noTransactions}}</p>
+					{{/}}
+					<div class="listingPage-pager transactionsPage-leftMost transactionsPage-rightMost">
+						{{#status.loadingOlderTransactions}}
+							<span type="buttton" class="listingPage-pager-loading">{{texts.transactions.table.loading}}</span>
+						{{/}}
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
