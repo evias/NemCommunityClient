@@ -275,7 +275,14 @@ function(languages,
                     message += ' (' + propertyName + ')';
                 }
 
-                var dataMessage = "NIS: " + data.message.replace(/_/g, " ");
+                var dataMessage;
+                if (data.message)
+                    dataMessage = "NIS: " + data.message.replace(/_/g, " ");
+                else if (data.error)
+                    dataMessage = data.status + ": " + data.error;
+                else
+                    dataMessage = data.status + ": ";
+
                 return showError(data.status, message || dataMessage);
             }
 
