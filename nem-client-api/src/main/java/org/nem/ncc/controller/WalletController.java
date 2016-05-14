@@ -1,7 +1,23 @@
 package org.nem.ncc.controller;
 
+import net.minidev.json.JSONArray;
+import net.minidev.json.JSONObject;
+import org.bouncycastle.crypto.BufferedBlockCipher;
+import org.bouncycastle.crypto.CipherParameters;
+import org.bouncycastle.crypto.InvalidCipherTextException;
+import org.bouncycastle.crypto.engines.AESEngine;
+import org.bouncycastle.crypto.modes.CBCBlockCipher;
+import org.bouncycastle.crypto.paddings.BlockCipherPadding;
+import org.bouncycastle.crypto.paddings.PKCS7Padding;
+import org.bouncycastle.crypto.paddings.PaddedBufferedBlockCipher;
+import org.bouncycastle.crypto.params.KeyParameter;
+import org.bouncycastle.crypto.params.ParametersWithIV;
 import org.eclipse.jetty.util.UrlEncoded;
+import org.nem.core.crypto.Hashes;
+import org.nem.core.serialization.JsonSerializer;
 import org.nem.core.utils.ExceptionUtils;
+import org.nem.core.utils.HexEncoder;
+import org.nem.core.utils.StringEncoder;
 import org.nem.ncc.addressbook.*;
 import org.nem.ncc.controller.requests.WalletNamePasswordBag;
 import org.nem.ncc.controller.viewmodels.WalletViewModel;
@@ -12,6 +28,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
+import java.security.SecureRandom;
+import java.util.Arrays;
 import java.util.function.*;
 import java.util.zip.*;
 
@@ -93,13 +111,123 @@ public class WalletController {
 		return this.walletMapper.toViewModel(wallet);
 	}
 
+	private BufferedBlockCipher setupBlockCipher(final byte[] sharedKey, final byte[] ivData, final boolean forEncryption) {
+		// Setup cipher parameters with key and IV.
+		final KeyParameter keyParam = new KeyParameter(sharedKey);
+		final CipherParameters params = new ParametersWithIV(keyParam, ivData);
+
+		// Setup AES cipher in CBC mode with PKCS7 padding.
+		final BlockCipherPadding padding = new PKCS7Padding();
+		final BufferedBlockCipher cipher = new PaddedBufferedBlockCipher(new CBCBlockCipher(new AESEngine()), padding);
+		cipher.reset();
+		cipher.init(forEncryption, params);
+		return cipher;
+	}
+
+	private String encryptPrivKey(final byte[] iv, final byte[] password, final byte[] data) {
+		byte[] derivedPassword = password;
+		for (int i = 0; i < 20; ++i) {
+			derivedPassword = Hashes.sha3_256(derivedPassword);
+		}
+		final BufferedBlockCipher cipher = setupBlockCipher(derivedPassword, iv, true);
+
+		final byte[] buf = new byte[cipher.getOutputSize(data.length)];
+		int length = cipher.processBytes(data, 0, data.length, buf, 0);
+		try {
+			length += cipher.doFinal(buf, length);
+		} catch (final InvalidCipherTextException e) {
+			return null;
+		}
+
+		final String encodedX = HexEncoder.getString(Arrays.copyOf(buf, length));
+		return encodedX;
+	}
+
+
+	private JSONObject encodeAccountToJsonAccount(
+			final WalletNamePasswordBag nameAndPassword,
+			final SecureRandom random,
+			final WalletAccount account) {
+		final JSONObject jsonAccountDescriptor = new JSONObject();
+		jsonAccountDescriptor.put("address", account.getAddress().getEncoded());
+		jsonAccountDescriptor.put("brain", true);
+		jsonAccountDescriptor.put("network", account.getAddress().getVersion());
+		jsonAccountDescriptor.put("algo", "pass:enc");
+
+		// store encrypted private key
+		{
+			final byte[] iv = new byte[16];
+			random.nextBytes(iv);
+			jsonAccountDescriptor.put("iv", HexEncoder.getString(iv));
+
+			final byte[] password = StringEncoder.getBytes(nameAndPassword.getPassword().toString());
+			final byte[] data = account.getPrivateKey().getRaw().toByteArray();
+			jsonAccountDescriptor.put("encrypted", encryptPrivKey(iv, password, data));
+		}
+		return jsonAccountDescriptor;
+	}
+
+	private JSONObject encodeAddressBookToJsonAddressBook(
+			final WalletNamePasswordBag nameAndPassword,
+			final SecureRandom random,
+			final AddressBook addressBook) {
+		final JsonSerializer jsonSerializer = new JsonSerializer();
+		final JSONObject jsonAddressBook = jsonSerializer.serializeToJson(addressBook);
+		final JSONArray accountLabels = (JSONArray)jsonAddressBook.get("accountLabels");
+		{
+			final byte[] iv = new byte[16];
+			random.nextBytes(iv);
+			jsonAddressBook.put("iv", HexEncoder.getString(iv));
+
+			final byte[] password = StringEncoder.getBytes(nameAndPassword.getPassword().toString());
+			final byte[] data = StringEncoder.getBytes( accountLabels.toJSONString() );
+			jsonAddressBook.put("accountLabels", encryptPrivKey(iv, password, data));
+		}
+		return jsonAddressBook;
+	}
+
+	/**
+	 * Export a wallet in a format suitable for lightwallet import
+	 * @param formdata The wallet name and password.
+	 * @return The raw bytes
+	 */
+	@RequestMapping(value = "/wallet/export/light", method = RequestMethod.POST)
+	public OctetStream exportWalletLight(@RequestBody final WalletNamePasswordBag formdata) {
+		return ExceptionUtils.propagate(() -> {
+			final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+			final Wallet wallet = this.walletServices.open(new WalletNamePasswordPair(formdata.getName().toString(), formdata.getPassword().toString()));
+			final SecureRandom random = new SecureRandom();
+
+			final JSONObject jsonWallet = new JSONObject();
+			jsonWallet.put("name", formdata.getName().toString());
+			final JSONObject jsonAccounts = new JSONObject();
+
+			final WalletAccount account = wallet.getPrimaryAccount();
+			jsonAccounts.put("0", encodeAccountToJsonAccount(formdata, random, account));
+			Integer index = 1;
+			for (final WalletAccount otherAccount : wallet.getOtherAccounts()) {
+				jsonAccounts.put(index.toString(), encodeAccountToJsonAccount(formdata, random, otherAccount));
+				index++;
+			}
+
+			jsonWallet.put("accounts", jsonAccounts);
+
+			final AddressBook addressBook = this.addressBookServices.open(new AddressBookNamePasswordPair(formdata.getName().toString(), formdata.getPassword().toString()));
+			jsonWallet.put("addressBook", encodeAddressBookToJsonAddressBook(formdata, random, addressBook));
+
+			byteArrayOutputStream.write( StringEncoder.getBytes( jsonWallet.toJSONString() ) );
+			return new OctetStream(byteArrayOutputStream.toByteArray());
+		});
+	}
+
 	/**
 	 * Exports a wallet as a zip file.
 	 *
 	 * @param name The wallet name.
 	 * @return The raw bytes.
 	 */
-	@RequestMapping(value = "/wallet/export", method = RequestMethod.POST)
+	@RequestMapping(value = "/wallet/export/zip", method = RequestMethod.POST)
 	public OctetStream exportWallet(@RequestBody final WalletName name) {
 		return ExceptionUtils.propagate(() -> {
 			final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

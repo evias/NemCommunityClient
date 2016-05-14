@@ -880,9 +880,52 @@ define(['jquery', 'ncc', 'NccLayout', 'Utils', 'TransactionType', 'filesaver'], 
                         ncc.get('texts.modals.changeWalletName.change')
                     );
                 },
+                exportWalletLight: function() {
+                    var wallet = ncc.get('wallet.wallet');
+                    ncc.showInputForm(ncc.get('texts.modals.exportWalletLight.title'), '',
+                        [
+                            {
+                                name: 'wallet',
+                                type: 'text',
+                                readonly: true,
+                                unimportant: true,
+                                label: {
+                                    content: ncc.get('texts.modals.changeWalletPassword.wallet')
+                                }
+                            },
+                            {
+                                name: 'password',
+                                type: 'password',
+                                label: {
+                                    content: ncc.get('texts.modals.changeWalletPassword.password')
+                                },
+                                isValid: function() {
+                                    return Utils.valid.notEmpty(this.get("values")['password']);
+                                }
+                            }
+                        ],
+                        {
+                            wallet: wallet
+                        },
+                        function(values, closeModal) {
+                            if (values['newPassword'] === values.confirmAddressBookPassword) {
+                                delete values.confirmAddressBookPassword;
+                                console.log(values);
+                                ncc.postRequest('wallet/export/light', values, function(data) {
+                                    console.log(data);
+                                    var blob = new Blob([data], {type: 'application/octet-binary'});
+                                    saveAs(blob, ncc.get('wallet.wallet') + '.json');
+                                });
+                            } else {
+                                ncc.showMessage(ncc.get('texts.modals.changeWalletPassword.passwordNotMatchTitle'), ncc.get('texts.modals.changeWalletPassword.passwordNotMatchMessage'));
+                            }
+                        },
+                        ncc.get('texts.modals.exportWalletLight.export')
+                    );
+                },
                 exportWalletZip: function() {
                     var values = {wallet: ncc.get('wallet.wallet')};
-                    ncc.postRawRequest('wallet/export', values, function(data) {
+                    ncc.postRawRequest('wallet/export/zip', values, function(data) {
                         var blob = new Blob([data], {type: 'application/octet-binary'});
                         saveAs(blob, ncc.get('wallet.wallet') + '.zip');
                     });

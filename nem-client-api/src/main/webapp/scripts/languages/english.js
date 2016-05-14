@@ -412,6 +412,10 @@ define({
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'Your entered password and password confirmation do not match. Please be sure you type your new password correctly.'
 			},
+			exportWalletLight: {
+			    title: 'Export for lightwallet',
+			    export: 'Export'
+			},
 			changeAccountLabel: {
 				title: 'Change Account Label',
 				label: 'Account label',
@@ -575,6 +579,7 @@ define({
 				changeWalletPassword: 'Change Wallet Password',
 				mergeWallets: 'Merge Wallets',
 				exportWallet: 'Export Wallet',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Create New Account',
 				createRealAccountData: 'Create Real Account Data',
 				verifyRealAccountData: 'Verify Real Account Data',
