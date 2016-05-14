@@ -4,14 +4,16 @@ define([
     'languages',
     'TransactionType', 'jquery', 'ractive', 'mustache', 'tooltipster', 'Utils', 'NccModal',
     'ConfirmModal', 'InputModal', 'SettingsModal', 'SendNemModal', 'NewNamespaceModal', 'NewMosaicModal', 'SignMultisigModal',
-    'ModificationConfirmModal', 'SignatureConfirmModal', 'TransactionConfirmModal', 'TransactionDetailsModal', 'AccountDetailsModal', 'ConvertMultisigModal',
-    'GenericDelegatedModal', 'GenericDelegatedConfirmModal'
+    'ModificationConfirmModal', 'SignatureConfirmModal', 'TransactionConfirmModal',
+    'TransactionDetailsModal', 'AccountDetailsModal', 'MosaicDetailsModal', 'NamespaceDetailsModal',
+    'ConvertMultisigModal', 'GenericDelegatedModal', 'GenericDelegatedConfirmModal'
 ],
 function(languages,
     TransactionType, $, Ractive, Mustache, tooltipster, Utils, NccModal,
     ConfirmModal, InputModal, SettingsModal, SendNemModal, NewNamespaceModal, NewMosaicModal, SignMultisigModal,
-    ModificationConfirmModal, SignatureConfirmModal, TransactionConfirmModal, TransactionDetailsModal, AccountDetailsModal, ConvertMultisigModal,
-    GenericDelegatedModal, GenericDelegatedConfirmModal) {
+    ModificationConfirmModal, SignatureConfirmModal, TransactionConfirmModal,
+    TransactionDetailsModal, AccountDetailsModal, MosaicDetailsModal, NamespaceDetailsModal,
+    ConvertMultisigModal, GenericDelegatedModal, GenericDelegatedConfirmModal) {
 
     var NccRactive = Ractive.extend({
         el: document.body,
@@ -25,7 +27,9 @@ function(languages,
             settingsModal: SettingsModal,
             sendNemModal: SendNemModal,
             newNamespaceModal: NewNamespaceModal,
+            namespaceDetailsModal: NamespaceDetailsModal,
             newMosaicModal: NewMosaicModal,
+            mosaicDetailsModal: MosaicDetailsModal,
             signMultisigModal: SignMultisigModal,
             modificationConfirmModal: ModificationConfirmModal,
             signatureConfirmModal: SignatureConfirmModal,
