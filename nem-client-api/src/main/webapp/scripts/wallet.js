@@ -317,6 +317,22 @@ define(['jquery', 'ncc', 'NccLayout', 'Utils', 'TransactionType', 'filesaver'], 
                 m.set('transaction', transaction);
                 m.set('privateLabels', ncc.get('privateLabels'));
                 m.open();
+            }; 
+
+            ncc.viewNamespace = function(transaction) {
+                var m = ncc.getModal('namespaceDetails');
+                m.set('TransactionType', TransactionType);
+                m.set('transaction', transaction);
+                m.set('privateLabels', ncc.get('privateLabels'));
+                m.open();
+            };
+
+            ncc.viewMosaic = function(transaction) {
+                var m = ncc.getModal('mosaicDetails');
+                m.set('TransactionType', TransactionType);
+                m.set('transaction', transaction);
+                m.set('privateLabels', ncc.get('privateLabels'));
+                m.open();
             };
 
             ncc.viewAccount = function(address) {
