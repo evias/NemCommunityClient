@@ -28,12 +28,15 @@ define(['jquery', 'ncc', 'NccLayout', 'Utils'], function($, ncc, NccLayout, Util
 
             // order is as follows:
             // 1. take owners of root namespaces
-            // 2. take all namespaces owned by rootOwners
+            // 2. take all namespaces owned by rootOwners (chain the requests... and collect results)
             // 3. take all mosaics from above namespaces
             $.getJSON(url, function getRootNamespaces(rootNamespaces) {
                 var output = [];
                 var ownersList = [];
                 var mosaicOutputs = [];
+
+                var allOwnerNamespaces = [];
+                var namespaceRequests = [];
                 for (var rootNs of rootNamespaces.data) {
                     //namespaces owned by root owners
                     // http://127.0.0.1:7890/namespace/mosaic/definition/page?namespace=jabo38_ltd
@@ -45,30 +48,40 @@ define(['jquery', 'ncc', 'NccLayout', 'Utils'], function($, ncc, NccLayout, Util
                         var url2 = remoteServer + '/account/namespace/page?address=' + rootNs.namespace.owner;
                         outputUrls.push({"url":url2});
 
-                        $.getJSON(url2, function(ownerNamespaces) {
-                            var index=0;
-                            for (var curNamespace of ownerNamespaces.data) {
-                                //mosaics lookup
-                                var url3 = remoteServer + '/namespace/mosaic/definition/page?namespace=' + curNamespace.fqn;
-                                outputUrls.push({"url":url3});
-
-                                // since we're using directly NIS API, we need to delay requests
-                                // not to trigger DoS filter
-                                setTimeout(function(){
-                                    $.getJSON(url3, function(ownerMosaics) {
-                                        for (var curMosaic of ownerMosaics.data) {
-                                            mosaicOutputs.push(curMosaic.mosaic);
-                                        } //end mosaics lookup for
-                                    }); //end mosaics lookup
-                                }, 20*index);
-                                index++;
-
-                                output.push(curNamespace);
-                            } //end namespaces owned by root owners for
-                        }); //end namespaces owned by root owners
+                        namespaceRequests.push( $.getJSON(url2, function pushNamespaces(ownerNamespaces) {
+                            allOwnerNamespaces.push(ownerNamespaces);
+                        }) );
                     } //end check if we already know this owner.
                     ownersList.push(rootNs.namespace.owner);
                 } //end namespace root for
+
+                // wrapper to pass url into the closure
+                var getMosaics = function getMosaics(url) {
+                    return function getMosaicsReal(){
+                        $.getJSON(url, function(ownerMosaics) {
+                            for (var curMosaic of ownerMosaics.data) {
+                                mosaicOutputs.push(curMosaic.mosaic);
+                            }
+                        });
+                    };
+                };
+                $.when.apply($, namespaceRequests).then(function(){
+                    var index = 0;
+                    for (var ownerNamespaces of allOwnerNamespaces) {
+                        for (var curNamespace of ownerNamespaces.data) {
+                            //mosaics lookup
+                            var url3 = remoteServer + '/namespace/mosaic/definition/page?namespace=' + curNamespace.fqn;
+                            outputUrls.push({"url":url3});
+
+                            // since we're using directly NIS API, we need to delay requests
+                            // not to trigger DoS filter
+                            setTimeout(getMosaics(url3), 30*index);
+                            index++;
+
+                            output.push(curNamespace);
+                        } //end namespaces owned by root owners for
+                    }
+                });
 
                 ncc.set('namespaces.all', output);
                 ncc.set('mosaics.all', mosaicOutputs);
