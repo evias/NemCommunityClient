@@ -133,9 +133,9 @@
 
             //owned mosaics
             //http://127.0.0.1:7890/account/mosaic/owned?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH
-            var remoteserver = ncc.get('settings.remoteServer.protocol') + "://" + ncc.get('settings.remoteServer.host') + ":" + ncc.get('settings.remoteServer.port');
+            var remoteServer = ncc.get('settings.remoteServer.protocol') + "://" + ncc.get('settings.remoteServer.host') + ":" + ncc.get('settings.remoteServer.port');
             var currAccount = ncc.get('activeAccount.address');
-            var url4 = remoteserver + '/account/mosaic/owned?address=' + currAccount;
+            var url4 = remoteServer + '/account/mosaic/owned?address=' + currAccount;
             var mosaicOwnedOutputs = [];
             $.getJSON(url4, function(data4) {
                 for (var i4 in data4.data) {
