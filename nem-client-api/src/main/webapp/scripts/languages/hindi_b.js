@@ -285,6 +285,7 @@ define({
 				notConnected: 'NEM क्लाउड से कनेक्टेड नहीं हे',
 				loading: 'Loading...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'ट्रांजैक्शन विवरण',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'बदलें',
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'आपका प्रवेश किया पासवर्ड और पासवर्ड की पुष्टि मेल नहीं खाते हैं. सही ढंग से अपना नया पासवर्ड टाइप करें.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'अकाउंट लेबल बदल',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'वॉलेट का पासवर्ड बदलें',
 				mergeWallets: 'मर्ज वॉलेट्स',
 				exportWallet: 'एक्सपोर्ट वॉलेट',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'नया अकाउंट बनाएँ',
 				createRealAccountData: 'नया असली NEM अकाउंट बनाएँ.',
 				verifyRealAccountData: 'असली NEM अकाउंट जाँचे.',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

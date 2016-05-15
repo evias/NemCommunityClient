@@ -285,6 +285,7 @@ define({
 				notConnected: "Nepripojený ku Cloudu NEM",
 				loading: "Načítava sa..."
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: "Detaily prevodu",
 				id: "ID",
@@ -411,6 +412,10 @@ define({
 				change: "Zmeniť",
 				passwordNotMatchTitle: "Oops!",
 				passwordNotMatchMessage: "Zadané heslo a heslo potvrdenia sa nezhodujú. Prosím, uistite sa, že ste nové heslo napísali správne."
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: "Zmeniť názov účtu ",
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: "Zmeniť heslo peňaženky",
 				mergeWallets: "Zlúčiť peňaženky",
 				exportWallet: "Exportovať peňaženku",
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: "Vytvoriť nový účet",
 				createRealAccountData: "Create Real Account Data",
 				verifyRealAccountData: "Verify Real Account Data",
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					"",
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

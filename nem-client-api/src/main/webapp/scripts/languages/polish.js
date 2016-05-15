@@ -285,6 +285,7 @@ define({
 				notConnected: 'Nie podłączony do chmury NEM',
 				loading: 'Ładowanie...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Szczegóły transakcji',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Zmień',
 				passwordNotMatchTitle: 'Ups!',
 				passwordNotMatchMessage: 'Wpisane hasło i potwierdzenie hasła różnią się. Proszę upewnić się, że hasło jest wpisane poprawnie.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Zmień etykietę konta',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Zmień Hasło Portfela',
 				mergeWallets: 'Połącz Portfele',
 				exportWallet: 'Eksportuj Portfel',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Stwórz Nowe Konto',
 				createRealAccountData: 'Utwórz prawdziwe konto',
 				verifyRealAccountData: 'Weryfikacja prawdziwego konta',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

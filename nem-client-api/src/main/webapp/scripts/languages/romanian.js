@@ -285,6 +285,7 @@ define({
 				notConnected: 'Neconectat la NEM Cloud',
 				loading: 'Se încarcă...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Detalii tranzacție',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Schimbă',
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'Parola introdusă si confirmarea parolei nu se potrivesc. Te rog asigură-te că introduci noua parolă corect.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Schimbă eticheta contului',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Schimbă parola portofelului',
 				mergeWallets: 'Unește portofele',
 				exportWallet: 'Exportă portofelul',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Crează cont nou',
 				createRealAccountData: 'Crează date reale de cont',
 				verifyRealAccountData: 'Verifică datele contului real',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

@@ -285,6 +285,7 @@ define({
 				notConnected: 'Kan geen verbinding maken met de NEM Cloud',
 				loading: 'Laden...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Transactie details',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Aanpassen',
 				passwordNotMatchTitle: 'Oeps!',
 				passwordNotMatchMessage: 'Het wachtwoord komt niet overeen.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Verander het label van de rekening',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Verander het wachtwoord van de portefeuille',
 				mergeWallets: 'Portefeuilles samenvoegen',
 				exportWallet: 'Exporteer de portefeuille',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Maak een nieuwe rekening',
 				createRealAccountData: 'Maak een echte rekening',
 				verifyRealAccountData: 'Controleer of de rekening gegevens juist zijn.',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

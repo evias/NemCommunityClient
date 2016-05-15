@@ -285,6 +285,7 @@ define({
 				notConnected: 'Non connesso alla rete NEM',
 				loading: 'Caricamento...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Informazioni sulla transazione',
 				id: 'Identificativo',
@@ -411,6 +412,10 @@ define({
 				change: 'Modifica',
 				passwordNotMatchTitle: 'Errore!',
 				passwordNotMatchMessage: 'Le password inserite non corrispondono. Assicurati di scriverle correttamente'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Modifica nome dell\'indirizzo',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Modifica password del portafoglio',
 				mergeWallets: 'Unisci portafogli',
 				exportWallet: 'Esporta portafoglio',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Crea nuovo indirizzo',
 				createRealAccountData: 'Crea indirizzo reale',
 				verifyRealAccountData: 'Verifica indirizzo reale',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'
