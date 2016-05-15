@@ -319,10 +319,9 @@ define(['jquery', 'ncc', 'NccLayout', 'Utils', 'TransactionType', 'filesaver'], 
                 m.open();
             }; 
 
-            ncc.viewMosaic = function(transaction) {
+            ncc.viewMosaic = function(mosaicData) {
                 var m = ncc.getModal('mosaicDetails');
-                m.set('TransactionType', TransactionType);
-                m.set('transaction', transaction);
+                m.set('transaction', mosaicData);
                 m.set('privateLabels', ncc.get('privateLabels'));
                 m.open();
             };
