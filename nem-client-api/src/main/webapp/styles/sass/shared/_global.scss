@@ -116,12 +116,12 @@ em {
 }
 
 .statusIndicator--warning {
-	background-color: #f1c40f;
+	background-color: #fabe00;
 	color: #333;
 }
 
 .statusIndicator--message {
-	background-color: #2ecc71;
+	background-color: #34b7af;
 	color: #ecf0f1;
 	@include stroke-text(#333);
 }
@@ -157,7 +157,7 @@ em {
 		display: block;
 		width: 100%;
 		height: 100%;
-		background-color: #5dcd86;
+		background-color: #34b7af;
 		@include transform-origin(50%, 50%);
 		@include animation(loading-quarter 1s infinite);
 	}

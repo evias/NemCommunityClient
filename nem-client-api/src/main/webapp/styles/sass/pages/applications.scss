@@ -107,7 +107,7 @@ main.applications-page {
 				@include transition(color .3s);
 				@include ellipsis-overflow(100%);
 				&:hover {
-					color: #e6801d;
+					color: #fabe00;
 				}
 			}
 			.author {
