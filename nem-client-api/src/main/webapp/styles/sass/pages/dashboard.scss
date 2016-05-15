@@ -217,6 +217,20 @@
 	}
 }
 
+//
+//
+//
+
+.namespacesMosaics-newNamespaceButton,
+.namespacesMosaics-newMosaicButton {
+    color: #fff;
+
+	&:disabled {
+		background-color: #888888;
+		pointer-events: none;
+	}
+}
+
 // ================================================================================
 // NEM VALUE TILE
 // ================================================================================
