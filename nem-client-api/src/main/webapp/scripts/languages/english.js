@@ -285,6 +285,7 @@ define({
 				notConnected: 'Not connected to NEM Cloud',
 				loading: 'Loading...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Transaction Details',
 				id: 'ID',
