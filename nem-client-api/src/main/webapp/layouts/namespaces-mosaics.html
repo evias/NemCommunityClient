@@ -3,8 +3,19 @@
 		<section class="listingPage">
 			<div class="listingPage-head">
 				<h1 class="listingPage-title">{{texts.namespacesmosaics.title}}</h1>
-				<button type="button" class="listingPage-mainButton button" disabled="true"  on-click="openNewNamespace()">{{texts.namespacesmosaics.newNamespace}}</button>
-				<button type="button" class="listingPage-mainButton button" disabled="true"  on-click="openNewMosaic()">{{texts.namespacesmosaics.newMosaic}}</button>
+
+                {{#if blockchainHeight > '218011'}}
+                    <button type="button" class="listingPage-mainButton button"  on-click="openNewNamespace()">{{texts.namespacesmosaics.newNamespace}}</button>
+                {{else}}
+                    <button type="button" class="listingPage-mainButton button" disabled="true"  on-click="openNewNamespace()">{{texts.namespacesmosaics.newNamespace}}</button>
+                {{/if}}
+                                        
+				 {{#if blockchainHeight > '218011'}}
+                    <button type="button" class="listingPage-mainButton button" on-click="openNewMosaic()">{{texts.namespacesmosaics.newMosaic}}</button>
+                 {{else}}
+                    <button type="button" class="listingPage-mainButton button" disabled="true"  on-click="openNewMosaic()">{{texts.namespacesmosaics.newMosaic}}</button>
+                 {{/if}}
+				
 				<div class="listingPage-searchArea">
 					<div class="listingPage-search">
 						<input class="listingPage-searchTextbox" type="text" />
@@ -48,7 +59,8 @@
 						{{#each mosaics.owned}}
 						<tr class="nsmsList-row">
 							<td class="nsmsList-cell nsmsList-col--mosaic">
-								{{.namespaceId}}:{{.name}}
+							<a class="hyperlink--default" href="javascript:;" on-click="viewMosaic(.)">{{.namespaceId}}:{{.name}}</a>
+								
 							</td>
 							<td class="nsmsList-cell nsmsList-col--quantity">
 								{{.quantity}}
@@ -63,27 +75,27 @@
 					<table class="nsmsList">
 						<thead>
 						<tr class="nsmsList-row">
-								<th>{{texts.namespacesmosaics.table.columns.0}}</th>
-								<th class="sortable
-								 {{#if (contactsSort_formattedAddress===1)}}icon-up-open{{else}}icon-down-open{{/if}} {{#if (contactsSortColumn !== 'formattedAddress')}}sort-inactive{{/if}}
-								 nsmsList-header nsmsList-col--name namespacesPage-leftMost" on-tap='sort:formattedAddress'>{{texts.namespacesmosaics.table.columns.1}}</th>
-								<th class="sortable
-								{{#if (contactsSort_privateLabel===1)}}icon-up-open{{else}}icon-down-open{{/if}} {{#if (contactsSortColumn !== 'privateLabel')}}sort-inactive{{/if}}
-								nsmsList-header nsmsList-col--height"  on-tap='sort:privateLabel'>{{texts.namespacesmosaics.table.columns.2}}</th>
-								<th class="sortable nsmsList-header nsmsList-col--actions namespacesPage-rightMost">{{texts.namespacesmosaics.table.columns.3}}</th>
+								<th class="nsmsList-header txList-col--sender nsmsList-col--owner namespacesPage-leftMost">{{texts.namespacesmosaics.table.columns.0}}</th>
+								<th class="nsmsList-header nsmsList-col--name ">{{texts.namespacesmosaics.table.columns.1}}</th>
+								<th class="nsmsList-header nsmsList-col--height" >{{texts.namespacesmosaics.table.columns.2}}</th>
+								<th class="nsmsList-header nsmsList-col--actions namespacesPage-rightMost">{{texts.namespacesmosaics.table.columns.3}}</th>
 							</tr>
 						</thead>
 						<tbody>
 							{{#each namespaces.all}}
 								<tr class="nsmsList-row">
-								<td> </td>
-								<td class="nsmsList-cell nsmsList-col--name">
-									{{.fqn}}
-								</td>
-								<td class="nsmsList-cell nsmsList-col--height">
-									{{.height}}
-								</td>
-								<td></td>
+									<td class="txList-col--sender">
+										<a class="hyperlink--default" href="javascript:;" on-click="viewAccount(.owner)">
+											{{#if privateLabels[.owner]}}
+												{{privateLabels[.owner]}}
+											{{else}}
+												{{.owner}}
+											{{/if}}
+										</a>
+									</td>
+									<td class="nsmsList-cell nsmsList-col--name">{{.fqn}}</td>
+									<td class="nsmsList-cell nsmsList-col--height">{{.height}}</td>
+									<td></td>
                      			</tr>
 							{{/each}}
 						</tbody>
@@ -102,7 +114,8 @@
 						{{#each mosaics.all}}
 							<tr class="nsmsList-row">
 								<td class="nsmsList-cell">
-									{{.id.namespaceId}}:{{.id.name}}
+								<a class="hyperlink--default" href="javascript:;" on-click="viewMosaic(.)">{{.id.namespaceId}}:{{.id.name}}</a>
+									
 								</td>
 								<td>
 									{{.description}}

@@ -4,14 +4,16 @@ define([
     'languages',
     'TransactionType', 'jquery', 'ractive', 'mustache', 'tooltipster', 'Utils', 'NccModal',
     'ConfirmModal', 'InputModal', 'SettingsModal', 'SendNemModal', 'NewNamespaceModal', 'NewMosaicModal', 'SignMultisigModal',
-    'ModificationConfirmModal', 'SignatureConfirmModal', 'TransactionConfirmModal', 'TransactionDetailsModal', 'AccountDetailsModal', 'ConvertMultisigModal',
-    'GenericDelegatedModal', 'GenericDelegatedConfirmModal'
+    'ModificationConfirmModal', 'SignatureConfirmModal', 'TransactionConfirmModal',
+    'TransactionDetailsModal', 'AccountDetailsModal', 'MosaicDetailsModal',
+    'ConvertMultisigModal', 'GenericDelegatedModal', 'GenericDelegatedConfirmModal'
 ],
 function(languages,
     TransactionType, $, Ractive, Mustache, tooltipster, Utils, NccModal,
     ConfirmModal, InputModal, SettingsModal, SendNemModal, NewNamespaceModal, NewMosaicModal, SignMultisigModal,
-    ModificationConfirmModal, SignatureConfirmModal, TransactionConfirmModal, TransactionDetailsModal, AccountDetailsModal, ConvertMultisigModal,
-    GenericDelegatedModal, GenericDelegatedConfirmModal) {
+    ModificationConfirmModal, SignatureConfirmModal, TransactionConfirmModal,
+    TransactionDetailsModal, AccountDetailsModal, MosaicDetailsModal,
+    ConvertMultisigModal, GenericDelegatedModal, GenericDelegatedConfirmModal) {
 
     var NccRactive = Ractive.extend({
         el: document.body,
@@ -26,6 +28,7 @@ function(languages,
             sendNemModal: SendNemModal,
             newNamespaceModal: NewNamespaceModal,
             newMosaicModal: NewMosaicModal,
+            mosaicDetailsModal: MosaicDetailsModal,
             signMultisigModal: SignMultisigModal,
             modificationConfirmModal: ModificationConfirmModal,
             signatureConfirmModal: SignatureConfirmModal,
@@ -275,7 +278,14 @@ function(languages,
                     message += ' (' + propertyName + ')';
                 }
 
-                var dataMessage = "NIS: " + data.message.replace(/_/g, " ");
+                var dataMessage;
+                if (data.message)
+                    dataMessage = "NIS: " + data.message.replace(/_/g, " ");
+                else if (data.error)
+                    dataMessage = data.status + ": " + data.error;
+                else
+                    dataMessage = data.status + ": ";
+
                 return showError(data.status, message || dataMessage);
             }
 
