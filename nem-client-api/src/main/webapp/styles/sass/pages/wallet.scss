@@ -14,9 +14,9 @@ $mainContent-topPadding: $statusIndicator-height + $header-height;
 
 $small-screen: $sidebar-width + $mainContent-leftPadding + $mainContent-width;
 
-$nemOrange: #dfa82f;
+$nemOrange: #fabe00;
 $nemGray: #8e8e8e;
-$nemGreen: #41ce7b;
+$nemGreen: #34b7af;
 
 // ================================================================================
 // Z-INDEX STACKING CONTEXT TREE
@@ -52,7 +52,7 @@ $zIndex-sidebar:	10;
 	// .noti-box {
 	// 	@include noti-box($notiBox-size);
 	// 	color: #fff;
-	// 	background-color: #e6801d;
+	// 	background-color: #fabe00;
 	// 	margin-right: 6px;
 	// }
 
@@ -563,7 +563,7 @@ $account-actions-width: 30px;
 	// 		color: #252a34;
 	// 	}
 	// 	&.news {
-	// 		background-color: #27d782;
+	// 		background-color: #34b7af;
 	// 		color: #252a34;
 	// 	}
 	// }
@@ -703,7 +703,7 @@ $account-actions-width: 30px;
 }
 
 .multisig-addCosignatory {
-	color: #5dcd86;
+	color: #34b7af;
 	font-weight: $fontWeight-bold;
 }
 
