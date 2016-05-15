@@ -49,7 +49,6 @@ public class TransferTransactionViewModel extends TransactionViewModel {
 		this.message = getMessageText(message);
 		this.hexMessage = getMessageHexFlag(message);
 		this.isEncrypted = isEncrypted(message);
-
 		this.mosaics = transfer.getAttachment().getMosaics();
 
 		this.direction = (this.getSigner().equals(relativeAccountAddress) ? OUTGOING_FLAG : 0)
@@ -133,7 +132,11 @@ public class TransferTransactionViewModel extends TransactionViewModel {
 			return "Warning: message cannot be decoded!";
 		}
 
-		final byte[] payload = message.getDecodedPayload();
+		byte[] payload = message.getDecodedPayload();
+		if (null == payload) {
+			return "Warning: invalid encoded message!";
+		}
+
 		if (payload.length > 1 && payload[0] == (byte)0xfe) {
 			return HexEncoder.getString(Arrays.copyOfRange(payload, 1, payload.length));
 		} else {
@@ -150,6 +153,9 @@ public class TransferTransactionViewModel extends TransactionViewModel {
 			return false;
 		}
 		final byte[] payload = message.getDecodedPayload();
+		if (null == payload) {
+			return false;
+		}
 		return (payload.length > 1 && payload[0] == (byte)0xfe);
 	}
 	//endregion
