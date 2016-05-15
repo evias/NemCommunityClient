@@ -75,28 +75,27 @@
 					<table class="nsmsList">
 						<thead>
 						<tr class="nsmsList-row">
-								<th>{{texts.namespacesmosaics.table.columns.0}}</th>
-								<th class="sortable
-								 {{#if (contactsSort_formattedAddress===1)}}icon-up-open{{else}}icon-down-open{{/if}} {{#if (contactsSortColumn !== 'formattedAddress')}}sort-inactive{{/if}}
-								 nsmsList-header nsmsList-col--name namespacesPage-leftMost" on-tap='sort:formattedAddress'>{{texts.namespacesmosaics.table.columns.1}}</th>
-								<th class="sortable
-								{{#if (contactsSort_privateLabel===1)}}icon-up-open{{else}}icon-down-open{{/if}} {{#if (contactsSortColumn !== 'privateLabel')}}sort-inactive{{/if}}
-								nsmsList-header nsmsList-col--height"  on-tap='sort:privateLabel'>{{texts.namespacesmosaics.table.columns.2}}</th>
-								<th class="sortable nsmsList-header nsmsList-col--actions namespacesPage-rightMost">{{texts.namespacesmosaics.table.columns.3}}</th>
+								<th class="nsmsList-header txList-col--sender nsmsList-col--owner namespacesPage-leftMost">{{texts.namespacesmosaics.table.columns.0}}</th>
+								<th class="nsmsList-header nsmsList-col--name ">{{texts.namespacesmosaics.table.columns.1}}</th>
+								<th class="nsmsList-header nsmsList-col--height" >{{texts.namespacesmosaics.table.columns.2}}</th>
+								<th class="nsmsList-header nsmsList-col--actions namespacesPage-rightMost">{{texts.namespacesmosaics.table.columns.3}}</th>
 							</tr>
 						</thead>
 						<tbody>
 							{{#each namespaces.all}}
 								<tr class="nsmsList-row">
-								<td> </td>
-								<td class="nsmsList-cell nsmsList-col--name">
-									
-								<a class="hyperlink--default" href="javascript:;" on-click="viewNamespace(.)">{{.fqn}}</a>
-								</td>
-								<td class="nsmsList-cell nsmsList-col--height">
-									{{.height}}
-								</td>
-								<td></td>
+									<td class="txList-col--sender">
+										<a class="hyperlink--default" href="javascript:;" on-click="viewAccount(.owner)">
+											{{#if privateLabels[.owner]}}
+												{{privateLabels[.owner]}}
+											{{else}}
+												{{.owner}}
+											{{/if}}
+										</a>
+									</td>
+									<td class="nsmsList-cell nsmsList-col--name">{{.fqn}}</td>
+									<td class="nsmsList-cell nsmsList-col--height">{{.height}}</td>
+									<td></td>
                      			</tr>
 							{{/each}}
 						</tbody>
