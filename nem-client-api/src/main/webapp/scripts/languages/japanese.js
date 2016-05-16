@@ -285,6 +285,7 @@ define({
 				notConnected: 'NEMクラウドに繋がっていません',
 				loading: '読み込み中…'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'トランザクション(取引)の詳細',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: '変更',
 				passwordNotMatchTitle: 'おっと…',
 				passwordNotMatchMessage: 'あなたが入力したパスワードが一致しません。 パスワードを再入力してください。'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'アカウントのラベルを変更する',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'ウォレットパスワードを変更する',
 				mergeWallets: 'ウォレットを統合する',
 				exportWallet: 'ウォレットをバックアップする',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: '新しいアカウントを作成する',
 				createRealAccountData: '実際のアカウントデータを作成する',
 				verifyRealAccountData: '実際のアカウントデータを確認する',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

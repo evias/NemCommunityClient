@@ -4,24 +4,16 @@
 			<div class="listingPage-head">
 				<h1 class="listingPage-title">{{texts.namespacesmosaics.title}}</h1>
 
-                {{#if blockchainHeight > '218011'}}
-                    <button type="button" class="listingPage-mainButton button"  on-click="openNewNamespace()">{{texts.namespacesmosaics.newNamespace}}</button>
-                {{else}}
-                    <button type="button" class="listingPage-mainButton button" disabled="true"  on-click="openNewNamespace()">{{texts.namespacesmosaics.newNamespace}}</button>
-                {{/if}}
-                                        
-				 {{#if blockchainHeight > '218011'}}
-                    <button type="button" class="listingPage-mainButton button" on-click="openNewMosaic()">{{texts.namespacesmosaics.newMosaic}}</button>
-                 {{else}}
-                    <button type="button" class="listingPage-mainButton button" disabled="true"  on-click="openNewMosaic()">{{texts.namespacesmosaics.newMosaic}}</button>
-                 {{/if}}
-				
+                <button type="button" class="listingPage-mainButton namespacesMosaics-newNamespaceButton button" disabled="true"  >{{texts.namespacesmosaics.newNamespace}}</button>
+                <button type="button" class="listingPage-mainButton namespacesMosaics-newMosaicButton button" disabled="true"  >{{texts.namespacesmosaics.newMosaic}}</button>
+				<!--
 				<div class="listingPage-searchArea">
 					<div class="listingPage-search">
 						<input class="listingPage-searchTextbox" type="text" />
 						<button class="listingPage-searchButton" type="submit" id="search-btn" class="icon-magnifying-glass-reverse"></button>
 					</div>
 				</div>
+				-->
 				
 			</div>
 			<div class="listingPage-body">
@@ -59,8 +51,7 @@
 						{{#each mosaics.owned}}
 						<tr class="nsmsList-row">
 							<td class="nsmsList-cell nsmsList-col--mosaic">
-							<a class="hyperlink--default" href="javascript:;" on-click="viewMosaic(.)">{{.namespaceId}}:{{.name}}</a>
-								
+								{{.namespaceId}}:{{.name}}
 							</td>
 							<td class="nsmsList-cell nsmsList-col--quantity">
 								{{.quantity}}

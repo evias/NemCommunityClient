@@ -285,6 +285,7 @@ define({
 				notConnected: 'не підключений до NEM Cloud',
 				loading: 'Завантаження...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Деталi транзакцiї',
 				id: 'Блок або ідентифікаційний код транзакцiї',
@@ -411,6 +412,10 @@ define({
 				change: 'Змiнити',
 				passwordNotMatchTitle: 'ой лишенько!',
 				passwordNotMatchMessage: 'Ваш введений пароль і підтвердження пароля не збігаються. Будь ласка, будьте уважнiше!'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Змiнити позначку акаунта',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Змiнити пароль гаманця',
 				mergeWallets: 'Об\'єднати гаманцi',
 				exportWallet: 'Експортувати гаманець',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Створити новий акаунт',
 				createRealAccountData: 'Create real account data',
 				verifyRealAccountData: 'Verify real account data',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

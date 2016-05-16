@@ -285,6 +285,7 @@ define({
 				notConnected: 'Neprisijungta prie NEM Cloud',
 				loading: 'Kraunasi...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Transakcijos duomenys',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Pakeisti',
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'Jūsų įvestas naujas slaptažodis ir jo patvirtinimas neatitinka. Prašome įsitikinti, kad naują slaptažodį įvedėte teisingai.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Pakeisti sąskaitos pavadinimą',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Pakeisti piniginės slaptažodį',
 				mergeWallets: 'Apjungti pinigines',
 				exportWallet: 'Eksportuoti piniginę',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Sukurti naują sąskaitą',
 				createRealAccountData: 'Sukurti realios sąskaitos duomenis',
 				verifyRealAccountData: 'Tikrinti realios sąskaitos duomenis',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

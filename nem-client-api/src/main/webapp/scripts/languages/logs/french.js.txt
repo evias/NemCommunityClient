@@ -659,4 +659,14 @@ translated texts.transactionTypes.55
 	      to: 'TRANSACTION MULTISIG '
 	based on: texts.transactionTypes.52
 
+-----changed texts.dashboard.assets.title
+	from: 'Your Assets'
+	  to: 'Your Mosaics'
+	 was: 'Vos actifs'
+
+translated texts.namespacesmosaics.balance
+	    from: 'Current Balance'
+	      to: 'Balance courante'
+	based on: texts.transactions.balance
+
 -----

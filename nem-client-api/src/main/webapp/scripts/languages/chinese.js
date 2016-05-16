@@ -285,6 +285,7 @@ define({
 				notConnected: '未连接 NEM 云',
 				loading: '加载中...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: '交易详情',
 				id: 'ID',
@@ -326,7 +327,8 @@ define({
 					transferable: '可传输性'
 				},
 				supplyType: '供给类型',
-				supplyAmount: '供给量'
+				supplyAmount: '供给量',
+
 			},
 			accountDetails: {
 				title: '账户细节',
@@ -410,6 +412,10 @@ define({
 				change: '修改',
 				passwordNotMatchTitle: '糟!',
 				passwordNotMatchMessage: '您输入的密码不正确，请务必正确输入您的密码'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: '更改帐户标识',
@@ -574,6 +580,7 @@ define({
 				changeWalletPassword: '修改钱包密码',
 				mergeWallets: '合并钱包',
 				exportWallet: '输出钱包',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: '创建新帐号',
 				createRealAccountData: '创建真实账户信息',
 				verifyRealAccountData: '确认真实账户信息',
@@ -718,13 +725,13 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+                    'Owner',
 					'命名空间和马赛克',
 					'创建',
 					'过期时间 (est.)'
 				],
-				loading: '命名空间和马赛克加载中...',
-				subNamespace: '子命名空间'
+				loading: 'Loading Namespaces & Mosaics...',
+				subNamespace: 'sub-namespace'
 			}
 		},
 		harvestedBlocks: {

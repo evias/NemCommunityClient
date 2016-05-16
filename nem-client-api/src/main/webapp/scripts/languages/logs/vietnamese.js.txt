@@ -688,4 +688,14 @@ translated texts.namespacesmosaics.table.columns.[0]
 	      to: ''
 	based on: texts.transactions.table.columns.[4]
 
+-----changed texts.dashboard.assets.title
+	from: 'Your Assets'
+	  to: 'Your Mosaics'
+	 was: 'Your Mosaics'
+
+translated texts.namespacesmosaics.balance
+	    from: 'Current Balance'
+	      to: 'Số dư hiện tại'
+	based on: texts.transactions.balance
+
 -----

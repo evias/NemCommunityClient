@@ -63,7 +63,7 @@
                 series: btcSeries,
                 commonSeriesSettings: {
                     argumentField: 'month',
-                    color: '#27d782',
+                    color: '#34b7af',
                     width: 1
                 },
                 tooltip: {

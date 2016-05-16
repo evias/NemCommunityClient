@@ -161,10 +161,6 @@ define({
 				yes: 'Oui',
 				no: 'Non'
 			},
-			initialTy: {
-				title: "Bievenue à NEM",
-				content: "<c>Sbhaqrq ba gur fgebat cevapvcyrf bs rtnyvgnevna naq rdhnyvgl va qvfgevohgvba, gur Arj Rpbabzl Zbirzrag, ARZ, unf abj svanyyl pbzr gb sehvgvba nsgre pybfr gb 14 zbaguf bs vagrafvir qrirybczrag. Va nqqvgvba gb 5 pber qrirybcref naq 7 pber znexrgref, jr unir n ubfg bs pbzzhavgl zrzoref jub unir urycrq hf va bar jnl be nabgure, jvgubhg jubz, guvf jbhyq arire unir pbzr gbtrgure fb jryy nf orvat bar bs gur srj pelcgb vavgvngvirf jvgu fhpu n ovt grnz. Fcrpvny zragvba vf tvira gb gur sbyybjvat:</c><ue/><c><o>Grpuavpny naq Znexrgvat vachg:</o><oe/> Nzl, naqzr, nirentrwbr, OenvaBsZnffrf, qmnezhfpu, RSSI, Rynan82, rexxv, servtrvfg, unccl4209, vafgnpnfu, wnqrqwnpx, XrivaYv, XxbgArz, xbbernz, Xelfgb, Ybv Gena, ylxn, zvkznfgre, ZeCbegZna, arzovg, akxbvy, bjba, Cnagure03, curebzbar, erabgrat.yv, evtry, FnhyTenl, funjayrnel, fbyvk, fgbar, guvyba, haibvqcy, munaxnvjra, mbngn87, 守望者, 攻陳τч酨鈊, 清风, 福泽天下</c><ue/><c><o>APP Hfre Vagresnpr genafyngvba:</o><oe/>ncrk, obrfgva, Punbf514, QVZXNMQF, svypurs, servtrvfg, Thyvire, vnzvavgabj06, Wnarn4cqn, xhccnynugv, Ypuneyrf, znegvfznegvf, zrff-yrybhpu, Cnenan, evtry, Funja, Fcvqre, 楊 輝彦</c><c><oe/>Va nqqvgvba gb gur nobir 67 grnz zrzoref, jr nyfb unir bgure zrzoref jub  pbagevohgrq, jurgure va grpuavpny, znexrgvat be fgerff grfgvat gur flfgrz qhevat gur nycun naq orgn cunfr. Jr jbhyq yvxr gb nqqvgvbanyyl gunax nyy gubfr vaqvivqhnyf abg yvfgrq urer naq gur terngre ARZ pbzzhavgl orpnhfr jvgubhg gurz, jr jbhyq unir abg rire pbzr fb sne.</c><ue/><c>Naq zbfg vzcbegnagyl<oe/><o>Gunax LBH!</o><oe/><oe/>Arj Rpbabzl fgnegf jvgu LBH!</c>"
-			},
 			initialBackup: {
 				title: "Bievenue à NEM",
 				content: "Vous pouvez créer une copie de sauvegarde de votre portefeuille à partir du menu du coin droit."
@@ -289,6 +285,7 @@ define({
 				notConnected: 'Pas connecté au Nuage NEM',
 				loading: 'Chargement...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Détails de la transaction',
 				id: 'ID',
@@ -312,22 +309,26 @@ define({
 				confirmations: 'Confirmations',
 				confirmationsUnknown: 'Inconnu',
 				amount: 'Montant',
+				multiplier: 'Multiplier',
 				innerFee: 'Frais interne',
 				multisigFees: 'Frais Multisig',
 				cosignatory: 'Cosignataire',
 				namespace: 'Espace-Nom',
 				rentalFee: 'Frais de location',
 				mosaicName: 'Nom de la Mosaïque',
+				mosaicQuantity: 'Mosaic quantity',
+				mosaicLevy: 'Mosaic levy',
 				description: 'Description',
 				propertiesLabel: 'Propriétés',
 				properties: {
 					divisibility: 'Divisibilité',
-					quantity: 'Quantité Maximum',
-					mutablequantity: 'La quantité peut évoluer',
+					initialSupply: 'Initial supply',
+					supplyMutable: 'Is supply mutable',
 					transferable: 'Est transférable'
 				},
 				supplyType: 'Fournir le type',
-				supplyAmount: 'Fournir le Montant'
+				supplyAmount: 'Fournir le Montant',
+
 			},
 			accountDetails: {
 				title: 'Détails du compte',
@@ -411,6 +412,10 @@ define({
 				change: 'Changer',
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'Le mot de passe et le mot de passe de confirmation ne sont pas pareils. S\'il vous plait, assurez-vous de taper votre nouveau mot de passe correctement.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Changer l\'étiquette du compte',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Changer le mot de passe du portefeuille',
 				mergeWallets: 'Fusionner des portefeuilles',
 				exportWallet: 'Exporter un portefeuille',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Créer un nouveau compte',
 				createRealAccountData: 'Créer les données réelles de compte',
 				verifyRealAccountData: 'Vérifier les données réelles de compte',
@@ -603,13 +609,14 @@ define({
 				'Applications',
 				'Comptes',
 				'Paramètres',
-				'Fermer l\'application'
+				'Fermer l\'application',
+				'Namespaces & Mosaics'
 			],
 			bootNodeWarning: 'Un nœud local doit être démarré avant de pouvoir utiliser pleinement les fonctionnalités de NCC.'
 		},
 		dashboard: {
 			assets: {
-				title: 'Vos actifs'
+				title: 'Your Mosaics'
 			},
 			importance: {
 				title: 'Score d\'importance',
@@ -703,6 +710,28 @@ define({
 				pending: 'En attente',
 				noTransactions: 'Aucune transaction n\'a encore été effectuée',
 				loading: 'Chargement de transactions supplémentaire...'
+			}
+		},
+		namespacesmosaics: {
+			title: 'Namespaces & Mosaics',
+			newNamespace: 'New Namespace',
+			newMosaic: 'New Mosaic',
+			balance: 'Balance courante',
+			filters: {
+				displayAll: 'Display all',
+				displayMineonly: 'Display mine only',
+				filterNamespace: 'Filter Namespace:',
+				filterMosaic: 'Filter Mosaic:'
+			},
+			table: {
+				columns: [
+					'Owner',
+					'Namespace & Mosaic',
+					'Creation',
+					'Expiration (est.)'
+				],
+				loading: 'Loading Namespaces & Mosaics...',
+				subNamespace: 'sub-namespace'
 			}
 		},
 		harvestedBlocks: {

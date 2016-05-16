@@ -285,6 +285,7 @@ define({
 				notConnected: 'Desconectado da nuvem de peers',
 				loading: 'Carregando...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Detalhes da transação',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Trocar',
 				passwordNotMatchTitle: 'Oopa!',
 				passwordNotMatchMessage: 'As senhas não conferem. Por favor, tente novamente.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Trocar identificação da conta',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Trocar a senha da carteira',
 				mergeWallets: 'Mesclar carteiras',
 				exportWallet: 'Exportar carteira',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Criar uma nova Conta',
 				createRealAccountData: 'Criar dados da conta real',
 				verifyRealAccountData: 'Verificar dados da conta Verdadeira',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

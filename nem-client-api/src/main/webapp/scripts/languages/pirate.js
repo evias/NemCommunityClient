@@ -285,6 +285,7 @@ define({
 				notConnected: "No one in crow's nest",
 				loading: "Loading..."
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: "Loot Details",
 				id: "ID",
@@ -411,6 +412,10 @@ define({
 				change: "Replace",
 				passwordNotMatchTitle: "Blimey!",
 				passwordNotMatchMessage: "Yer check does not fit yer pick. Call yer locksmith."
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: "Change log label",
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: "Change Coffer's pick",
 				mergeWallets: "Repack coffers",
 				exportWallet: "Hail yer Coffer",
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: "Create new Logbook",
 				createRealAccountData: 'Create real account data',
 				verifyRealAccountData: 'Verify real account data',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					"",
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

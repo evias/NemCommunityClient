@@ -285,6 +285,7 @@ define({
 				notConnected: 'Nije spojen na NEM oblak',
 				loading: 'Učitavanje...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Detalji transakcije',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Izmijeni',
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'Unesena lozinka i potvrda lozinke se ne podudaraju. Molimo Vas da upišete novu lozinku ispravno.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Izmijeni oznaku računa',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Izmijeni lozinku novčanika',
 				mergeWallets: 'Spoji novčanike',
 				exportWallet: 'Izvezi novčanike',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Stvori novi račun',
 				createRealAccountData: 'Stvori podatke za stvarni račun',
 				verifyRealAccountData: 'Provjeri podatke za stvarnog računa',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

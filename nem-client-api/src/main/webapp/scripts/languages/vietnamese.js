@@ -285,6 +285,7 @@ define({
 				notConnected: 'Không kết nối tới NEM Cloud',
 				loading: 'Đang tải...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Chi tiết giao dịch',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Thay đổi',
 				passwordNotMatchTitle: 'Ui chà!',
 				passwordNotMatchMessage: 'Mật khẩu và mật khẩu xác nhận mà bạn nhập không khớp. Hãy chắc chắn rằng bạn gõ đúng mật khẩu mới.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Đổi nhãn tài khoản',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Đổi mật khẩu ví',
 				mergeWallets: 'Hợp nhất nhiều ví',
 				exportWallet: 'Xuất ví',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Tạo tài khoản mới',
 				createRealAccountData: 'Tạo dữ liệu tài khoản thực',
 				verifyRealAccountData: 'Verify real account data',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

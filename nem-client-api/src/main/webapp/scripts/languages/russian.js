@@ -285,6 +285,7 @@ define({
 				notConnected: 'Не соединён с  NEM Cloud',
 				loading: 'Загрузка...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Детали транзакции',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Изменить',
 				passwordNotMatchTitle: 'Oops!',
 				passwordNotMatchMessage: 'Введённый Вами пароль и подтверждение пароля не совпадают. Пожалуйста убедитесь, что Вы правильно написали новый пароль.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Изменить маркировку аккаунта',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Изменить Пароль Кошелька',
 				mergeWallets: 'Объединить Кошельки',
 				exportWallet: 'Экспорт Кошелька',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Создать Новый Аккаунт',
 				createRealAccountData: 'Create real account data',
 				verifyRealAccountData: 'Verify real account data',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'

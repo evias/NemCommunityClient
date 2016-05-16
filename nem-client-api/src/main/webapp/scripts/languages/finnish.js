@@ -285,6 +285,7 @@ define({
 				notConnected: 'Ei yhteydessä NEM Cloud -palveluun',
 				loading: 'Ladataan...'
 			},
+			mosaicDetails: 'Mosaic Details',
 			transactionDetails: {
 				title: 'Siirron tiedot',
 				id: 'ID',
@@ -411,6 +412,10 @@ define({
 				change: 'Vaihda',
 				passwordNotMatchTitle: 'Hups!',
 				passwordNotMatchMessage: 'Syöttämäsi salasana ja salasanan vahvistus eivät vastaa toisiaan. Varmista, että syötät uuden salasanasi oikein.'
+			},
+			exportWalletLight: {
+				title: 'Export for lightwallet',
+				export: 'Export'
 			},
 			changeAccountLabel: {
 				title: 'Vaihda tilin nimi',
@@ -575,6 +580,7 @@ define({
 				changeWalletPassword: 'Vaihda lompakon salasana',
 				mergeWallets: 'Yhdistä lompakot',
 				exportWallet: 'Vie lompakko',
+				exportWalletLight: 'Export for Lightwallet',
 				createAccount: 'Luo uusi lompakko',
 				createRealAccountData: 'Luo real account data',
 				verifyRealAccountData: 'Tarkista real account data',
@@ -719,7 +725,7 @@ define({
 			},
 			table: {
 				columns: [
-					'',
+					'Owner',
 					'Namespace & Mosaic',
 					'Creation',
 					'Expiration (est.)'
