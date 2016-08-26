@@ -5,6 +5,7 @@ import org.nem.console.models.AliasedKeyPair;
 import org.nem.console.utils.*;
 import org.nem.core.crypto.*;
 import org.nem.core.model.*;
+import org.nem.core.model.primitive.BlockHeight;
 import org.nem.core.time.TimeInstant;
 import org.nem.core.utils.HexEncoder;
 
@@ -89,8 +90,20 @@ public abstract class TransactionCommand implements Command {
 		return new Account(address);
 	}
 
+	private static long feeFork(final int version) {
+		final byte network = (byte)(version >> 24);
+		return network == NetworkInfos.getMainNetworkInfo().getVersion()
+				// TODO: UPDATE BEFORE RELEASE
+				? 1_000_000
+				: (network == NetworkInfos.getMijinNetworkInfo().getVersion() ? 1 : 572_500);
+	}
+
 	private static void prepareAndSign(final Transaction transaction) {
-		final DefaultTransactionFeeCalculator calculator = new DefaultTransactionFeeCalculator();
+		final DefaultTransactionFeeCalculator calculator = new DefaultTransactionFeeCalculator(
+					id -> null,
+					() -> { return new BlockHeight(572_500); },
+					new BlockHeight(feeFork(NetworkInfos.getMainNetworkInfo().getVersion() << 24)));
+
 		transaction.setFee(calculator.calculateMinimumFee(transaction));
 		transaction.setDeadline(transaction.getTimeStamp().addHours(12));
 		transaction.sign();
