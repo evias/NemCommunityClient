@@ -3,7 +3,8 @@ package org.nem.specific.deploy.appconfig;
 import org.nem.core.connect.*;
 import org.nem.core.connect.client.AsyncNisConnector;
 import org.nem.core.metadata.ApplicationMetaData;
-import org.nem.core.model.NetworkInfos;
+import org.nem.core.model.*;
+import org.nem.core.model.primitive.BlockHeight;
 import org.nem.core.time.TimeProvider;
 import org.nem.deploy.*;
 import org.nem.ncc.*;
@@ -59,7 +60,23 @@ public class NccAppConfig {
 
 	@Bean
 	public NccMain nccMain() {
+		this.setupGlobals();
 		return new NccMain(this.nccConfiguration(), this.nccScheduler());
+	}
+
+	private void setupGlobals() {
+		NemGlobals.setTransactionFeeCalculator(new DefaultTransactionFeeCalculator(
+				id -> null,
+				() -> this.primaryNisConnector().forward(this.chainServices()::getChainHeightAsync),
+				new BlockHeight(feeFork(this.nccConfiguration().getNetworkInfo().getVersion() << 24))));
+
+	}
+
+	private static long feeFork(final int version) {
+		final byte network = (byte)(version >> 24);
+		return network == NetworkInfos.getMainNetworkInfo().getVersion()
+				? 875_000
+				: (network == NetworkInfos.getMijinNetworkInfo().getVersion() ? 1 : 572_500);
 	}
 
 	@Bean
