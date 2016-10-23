@@ -94,7 +94,7 @@ public abstract class TransactionCommand implements Command {
 		final byte network = (byte)(version >> 24);
 		return network == NetworkInfos.getMainNetworkInfo().getVersion()
 				// TODO: UPDATE BEFORE RELEASE
-				? 1_000_000
+				? 875_000
 				: (network == NetworkInfos.getMijinNetworkInfo().getVersion() ? 1 : 572_500);
 	}
 
