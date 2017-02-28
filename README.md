@@ -1,6 +1,6 @@
 NEM Community Client (NCC)
 ====================
-[![Build Status](https://travis-ci.org/NewEconomyMovement/NemCommunityClient.svg?branch=master)](https://travis-ci.org/NewEconomyMovement/NemCommunityClient)
+[![Build Status](https://travis-ci.org/NemProject/NemCommunityClient.svg?branch=master)](https://travis-ci.org/NemProject/NemCommunityClient)
 
 NCC is the initial client provided with NEM. It provides a web interface for managing wallets and interacting with the NEM Infrastructure Server (NIS).
 
@@ -25,7 +25,7 @@ nem.core documentation can be found [here](http://bob.nem.ninja/org.nem.core/)
 Running NCC Locally
 -------------------
 
-In order to run the client with full functionality, a NEM Infrastructure Server (NIS) instance should be running 
+In order to run the client with full functionality, a NEM Infrastructure Server (NIS) instance should be running
 on the local machine.
 
 The NCC client can be started by running the org.nem.deploy.CommonStarter class.
@@ -35,9 +35,9 @@ The monitor programm is started via org.nem.monitor.NemMonitor
 NCC REST API
 ------------
 
-The NCC API is available as a swagger.json file [here](docs/ncc-api-swagger.json). 
+The NCC API is available as a swagger.json file [here](docs/ncc-api-swagger.json).
 
-A rendered version is available [here](http://nem.pucchiwerk.eu/ncc/api/). 
+A rendered version is available [here](http://nem.pucchiwerk.eu/ncc/api/).
 
 (The deprecated version of the NCC REST API can be found [here](docs/api.md)).
 
@@ -87,4 +87,3 @@ Please use the intellij settings checked in under settings/nem_project_settings.
 - Avoid the use of trailing whitespace.
 - Keep functions short and understandable :).
 - Do not introduce consecutive blank lines.
-
