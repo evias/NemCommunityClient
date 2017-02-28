@@ -91,7 +91,7 @@ public class TransactionController {
 	 */
 	@RequestMapping(value = "/wallet/account/remote/validate", method = RequestMethod.POST)
 	public PartialTransferInformationViewModel validateImportanceTransferData(@RequestBody final PartialTransferInformationRequest request) {
-		return this.transactionMapper.toViewModel(request);
+		return this.transactionMapper.toViewModel();
 	}
 
 	// TODO 20150131 J-G: why don't we want to try consolidating into a single transaction/send transaction/validate?
